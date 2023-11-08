@@ -26,11 +26,7 @@ export default class BlogSix extends React.Component {
 
                                             <div className="col-xl-7">
                                                 <div className="blog-list__single-content">
-                                                    <ul className="meta-info">
-                                                        <li><span className="icon-account"></span><Link to={process.env.PUBLIC_URL + `/`}>Admin</Link></li>
-                                                        <li><span className="icon-bubble-chat"></span><Link to={process.env.PUBLIC_URL + `/`}>2 Comments</Link>
-                                                        </li>
-                                                    </ul>
+                                                   
                                                     <h2><Link to={process.env.PUBLIC_URL + `/blog-details`}>Improve Workflow With Agile Construction</Link>
                                                     </h2>
                                                     <p>There are many variations of passages of Lorem Ipsum available, but
@@ -55,11 +51,7 @@ export default class BlogSix extends React.Component {
 
                                             <div className="col-xl-7">
                                                 <div className="blog-list__single-content">
-                                                    <ul className="meta-info">
-                                                        <li><span className="icon-account"></span><Link to={process.env.PUBLIC_URL + `/`}>Admin</Link></li>
-                                                        <li><span className="icon-bubble-chat"></span><Link to={process.env.PUBLIC_URL + `/`}>2 Comments</Link>
-                                                        </li>
-                                                    </ul>
+                                                   
                                                     <h2><Link to={process.env.PUBLIC_URL + `/blog-details`}>Tips : Is Builders Needs Liability
                                                             Insurance</Link></h2>
                                                     <p>There are many variations of passages of Lorem Ipsum available, but
@@ -84,11 +76,7 @@ export default class BlogSix extends React.Component {
 
                                             <div className="col-xl-7">
                                                 <div className="blog-list__single-content">
-                                                    <ul className="meta-info">
-                                                        <li><span className="icon-account"></span><Link to={process.env.PUBLIC_URL + `/`}>Admin</Link></li>
-                                                        <li><span className="icon-bubble-chat"></span><Link to={process.env.PUBLIC_URL + `/`}>2 Comments</Link>
-                                                        </li>
-                                                    </ul>
+                                                   
                                                     <h2><Link to={process.env.PUBLIC_URL + `/blog-details`}>Capitalise On Low Hanging Fruit To
                                                             Identify</Link></h2>
                                                     <p>There are many variations of passages of Lorem Ipsum available, but
@@ -113,11 +101,7 @@ export default class BlogSix extends React.Component {
 
                                             <div className="col-xl-7">
                                                 <div className="blog-list__single-content">
-                                                    <ul className="meta-info">
-                                                        <li><span className="icon-account"></span><Link to={process.env.PUBLIC_URL + `/`}>Admin</Link></li>
-                                                        <li><span className="icon-bubble-chat"></span><Link to={process.env.PUBLIC_URL + `/`}>2 Comments</Link>
-                                                        </li>
-                                                    </ul>
+                                                   
                                                     <h2><Link to={process.env.PUBLIC_URL + `/blog-details`}>Best Cement Roof Manufacture Company</Link>
                                                     </h2>
                                                     <p>There are many variations of passages of Lorem Ipsum available, but
@@ -143,11 +127,7 @@ export default class BlogSix extends React.Component {
 
                                             <div className="col-xl-7">
                                                 <div className="blog-list__single-content">
-                                                    <ul className="meta-info">
-                                                        <li><span className="icon-account"></span><Link to={process.env.PUBLIC_URL + `/`}>Admin</Link></li>
-                                                        <li><span className="icon-bubble-chat"></span><Link to={process.env.PUBLIC_URL + `/`}>2 Comments</Link>
-                                                        </li>
-                                                    </ul>
+                                                   
                                                     <h2><Link to={process.env.PUBLIC_URL + `/blog-details`}>What Can Not You Put In The Dumpster?</Link>
                                                     </h2>
                                                     <p>There are many variations of passages of Lorem Ipsum available, but
@@ -172,11 +152,7 @@ export default class BlogSix extends React.Component {
 
                                             <div className="col-xl-7">
                                                 <div className="blog-list__single-content">
-                                                    <ul className="meta-info">
-                                                        <li><span className="icon-account"></span><Link to={process.env.PUBLIC_URL + `/`}>Admin</Link></li>
-                                                        <li><span className="icon-bubble-chat"></span><Link to={process.env.PUBLIC_URL + `/`}>2 Comments</Link>
-                                                        </li>
-                                                    </ul>
+                                                   
                                                     <h2><Link to={process.env.PUBLIC_URL + `/blog-details`}>The 9 Best Guideline For The
                                                             Construction</Link></h2>
                                                     <p>There are many variations of passages of Lorem Ipsum available, but
@@ -201,11 +177,7 @@ export default class BlogSix extends React.Component {
 
                                             <div className="col-xl-7">
                                                 <div className="blog-list__single-content">
-                                                    <ul className="meta-info">
-                                                        <li><span className="icon-account"></span><Link to={process.env.PUBLIC_URL + `/`}>Admin</Link></li>
-                                                        <li><span className="icon-bubble-chat"></span><Link to={process.env.PUBLIC_URL + `/`}>2 Comments</Link>
-                                                        </li>
-                                                    </ul>
+                                                   
                                                     <h2><Link to={process.env.PUBLIC_URL + `/blog-details`}>What Are The Benefits Of LEED
                                                             Certification?</Link></h2>
                                                     <p>There are many variations of passages of Lorem Ipsum available, but

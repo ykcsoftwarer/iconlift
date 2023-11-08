@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import HeaderThree from "../../../../common/header/HeaderThree";
 import Breadcrumb from "../../../../common/breadcrumb/Breadcrumb";
 import FooterOne from "../../../../common/footer/FooterOne";
-import BenefitsOne from "../../comp/BlogFive";
+import BenefitsOne from "../../comp/categoryDetail";
+
 
 const Kabin = () => {
   return (
