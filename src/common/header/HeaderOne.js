@@ -56,8 +56,8 @@ export default class HeaderOne extends React.Component {
                                                     <span className="icon-pin"></span>
                                                 </div>
                                                 <div className="text-box">
-                                                    <h3>Our Location</h3>
-                                                    <p>Fevziçakmak mh. 10762 sk. B-Blok No : 8 B Karatay / Konya</p>
+                                                    <h3>Konumumuz</h3>
+                                                    <p>Fevziçakmak mh. 10762 sk. B-Blok <br/> No : 8 B Karatay / Konya</p>
                                                 </div>
                                             </li>
 
@@ -66,7 +66,7 @@ export default class HeaderOne extends React.Component {
                                                     <span className="icon-email"></span>
                                                 </div>
                                                 <div className="text-box">
-                                                    <h3>Online Support</h3>
+                                                    <h3>Çevrimiçi Destek</h3>
                                                     <p className="email"><a href="mailto:needhelp@company.com">info@iconlift.com.tr</a>
                                                     </p>
                                                 </div>
@@ -77,7 +77,7 @@ export default class HeaderOne extends React.Component {
                                                     <span className="icon-phone-call"></span>
                                                 </div>
                                                 <div className="text-box">
-                                                    <h3>Free Contact</h3>
+                                                    <h3>Iletisim</h3>
                                                     <p className="number"><a href="tel:03325028282">0332 502 82 82</a></p>
                                                 </div>
                                             </li>

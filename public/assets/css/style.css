@@ -21,8 +21,10 @@
 :root {
     --thm-font: 'Open Sans', sans-serif;
     --thm-font-2: 'Roboto', sans-serif;
-    --thm-base: #ff5e14;
-    --thm-base-rgb: 255, 94, 20;
+    /* --thm-base: #ff5e14; */
+    --thm-base: #C70039;
+    /* --thm-base-rgb: 255, 94, 20; */
+    --thm-base-rgb: #C70039;
     --thm-black: #001659;
     --thm-black-rgb: 0, 22, 89;
     --thm-gray: #838691;
