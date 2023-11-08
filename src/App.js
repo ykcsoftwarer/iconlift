@@ -15,15 +15,14 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 
-
-import Urünler from "./Kişiler/Fatih/Pagesss/ürünler/Urünler";
-import Kabin from "./Kişiler/Fatih/Pagesss/ürünler/Kabin";
 import AsansörSistemleri from "./pages/AsansörSistemleri";
 import AsansörDetail from "./pages/AsansörDetail";
 import GeneralContracting from "./pages/Vizyonumuz";
 import ServicesPage from "./pages/Hakkimizda";
 import MetrialManagment from "./pages/Misyonumuz";
 import ContactPage from "./pages/Iletisim";
+import BlogSix from "./Kişiler/Fatih/comp/BlogSix";
+import Product from "./Kişiler/Fatih/comp/Product";
 
 function App() {
   useEffect(() => {
@@ -43,13 +42,13 @@ function App() {
         <Route
           path={`${process.env.PUBLIC_URL}/kabin`}
           exact
-          element={<Kabin />}
+          element={<BlogSix/>}
         />
        
         <Route
           path={`${process.env.PUBLIC_URL}/ürünler`}
           exact
-          element={<Urünler />}
+          element={<Product />}
         />
         <Route path={`${process.env.PUBLIC_URL}/asansör`} exact element={<AsansörSistemleri />} />
          <Route path={`${process.env.PUBLIC_URL}/asansörDetail`} exact element={<AsansörDetail />} />

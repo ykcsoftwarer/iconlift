@@ -86,19 +86,7 @@ const HeaderThree = () => {
 
 
                                 <div className="main-header-one__bottom-right">
-                                    <div className="search-box">
-                                        <SearchButton />
-                                    </div>
-
-                                    <div className="cart-btn">
-                                        <Link to={process.env.PUBLIC_URL + `/`}>
-                                            <span className="icon-shopping-bag-1"></span><span className="count">0</span>
-                                        </Link>
-                                    </div>
-
-                                    <div className="main-header-one__bottom-right-btn">
-                                        <Link to={process.env.PUBLIC_URL + `/`} className="thm-btn" data-text="Get Started +">Get Started +</Link>
-                                    </div>
+                                   
 
                                 </div>
 

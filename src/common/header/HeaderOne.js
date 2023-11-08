@@ -104,7 +104,7 @@ export default class HeaderOne extends React.Component {
 
 
                                     <div className="main-header-one__bottom-right">
-                                        <div className="search-box">
+                                        {/* <div className="search-box">
                                             <SearchButton />
                                         </div>
 
@@ -116,7 +116,7 @@ export default class HeaderOne extends React.Component {
 
                                         <div className="side-content-button-box">
                                             <OffCanvasStyleOne />
-                                        </div>
+                                        </div> */}
 
                                     </div>
 

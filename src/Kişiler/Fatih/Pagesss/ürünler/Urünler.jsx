@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ILCardürün from "../../comp/ILCardürün";
 import HeaderThree from "../../../../common/header/HeaderThree";
 import FooterOne from "../../../../common/footer/FooterOne";
+import BlogFour from "../../comp/Product";
 
 const Urünler = () => {
   useEffect(() => {
@@ -46,10 +47,10 @@ const Urünler = () => {
       <HeaderThree />
       <section className="services-details-page">
         <div className="container">
+              <BlogFour />
           <div className="row">
             {/* Start Services Details Content */}
             <div className="col-xl-7 col-lg-7">
-              <ILCardürün />
             </div>
             {/* End Services Details Content */}
 
@@ -59,7 +60,7 @@ const Urünler = () => {
                 {/* <ServiceSearch /> */}
 
                 {/* Start Services Details Sidebar Single */}
-                <div className="services-details__sidebar-single services-details-category">
+                {/* <div className="services-details__sidebar-single services-details-category">
                   <div className="title">
                     <h2>Ürünler Category</h2>
                   </div>
@@ -131,7 +132,7 @@ const Urünler = () => {
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 {/* End Services Details Sidebar Single */}
 
                 {/* <ButtonBox />

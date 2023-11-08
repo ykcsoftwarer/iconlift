@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import HeaderThree from "../../../../common/header/HeaderThree";
 import Breadcrumb from "../../../../common/breadcrumb/Breadcrumb";
 import FooterOne from "../../../../common/footer/FooterOne";
+import BenefitsOne from "../../comp/BlogFive";
 
 const Kabin = () => {
   return (
@@ -17,7 +18,7 @@ const Kabin = () => {
           <div className="row">
             {/* Start Services Details Content */}
             <div className="col-xl-7 col-lg-7">
-            <IlUrün />
+            <BenefitsOne />
             </div>
             {/* End Services Details Content */}
 
