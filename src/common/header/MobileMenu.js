@@ -186,7 +186,7 @@ const SidebarLink = styled(Link)`
     font-size: 16px;
     font-weight: 400;
     &:hover {
-        background: #ff5e14;
+        background: #C70039;
         color: #fff;
         cursor: pointer;
     }
@@ -208,7 +208,7 @@ const DropdownLink = styled(Link)`
     font-size: 16px;
     &:hover,
     &:active {
-        background: #ff5e14;
+        background: #C70039;
         cursor: pointer;
         color: #fff;
     }
@@ -242,7 +242,7 @@ const SubMenu = ({ item }) => {
 };
 
 const NavIcon = styled(Link)`
-    color: #ff5e14;
+    color: #C70039;
     font-size: 2rem;
     height: 50px;
     display: flex;

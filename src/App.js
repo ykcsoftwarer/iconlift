@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import WOW from "wowjs";
@@ -14,10 +14,6 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-
-
-import Urünler from "./Kişiler/Fatih/Pagesss/ürünler/Urünler";
-import Kabin from "./Kişiler/Fatih/Pagesss/ürünler/Kabin";
 import AsansörSistemleri from "./pages/AsansörSistemleri";
 import AsansörDetail from "./pages/AsansörDetail";
 import GeneralContracting from "./pages/Vizyonumuz";
@@ -25,7 +21,15 @@ import ServicesPage from "./pages/Hakkimizda";
 import MetrialManagment from "./pages/Misyonumuz";
 import ContactPage from "./pages/Iletisim";
 
+import Product from "./Kişiler/Fatih/Pagesss/ürünler/Product";
+import ProductDetail from "./Kişiler/Fatih/Pagesss/ürünler/ProductDetail";
+import liftApi from "./data/data";
+
 function App() {
+  const [data, setdata] = useState();
+  const dataFecth = liftApi
+    
+  console.log(dataFecth);
   useEffect(() => {
     new WOW.WOW({
       live: false,
@@ -41,19 +45,28 @@ function App() {
           element={<HomeDefault />}
         />
         <Route
-          path={`${process.env.PUBLIC_URL}/kabin`}
+          path={`${process.env.PUBLIC_URL}/ürünler/:type`}
           exact
-          element={<Kabin />}
+          element={<ProductDetail  />}
         />
-       
+
         <Route
           path={`${process.env.PUBLIC_URL}/ürünler`}
           exact
-          element={<Urünler />}
+          element={<Product  />}
         />
-        <Route path={`${process.env.PUBLIC_URL}/asansör`} exact element={<AsansörSistemleri />} />
-         <Route path={`${process.env.PUBLIC_URL}/asansörDetail`} exact element={<AsansörDetail />} />
-      
+
+        <Route
+          path={`${process.env.PUBLIC_URL}/asansör`}
+          exact
+          element={<AsansörSistemleri />}
+        />
+        <Route
+          path={`${process.env.PUBLIC_URL}/asansörDetail`}
+          exact
+          element={<AsansörDetail />}
+        />
+
         <Route
           path={`${process.env.PUBLIC_URL}/vizyonumuz`}
           exact
@@ -74,7 +87,7 @@ function App() {
           exact
           element={<ContactPage />}
         />
-        <Route path={`${process.env.PUBLIC_URL}/*`} exact element={<Error />} />
+        {/* <Route path={`${process.env.PUBLIC_URL}/*`} exact element={<Error />} /> */}
       </Routes>
       <ScrollToTop
         className="scrollUp"
