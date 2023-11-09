@@ -14,7 +14,6 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-
 import AsansörSistemleri from "./pages/AsansörSistemleri";
 import AsansörDetail from "./pages/AsansörDetail";
 import GeneralContracting from "./pages/Vizyonumuz";
@@ -22,7 +21,8 @@ import ServicesPage from "./pages/Hakkimizda";
 import MetrialManagment from "./pages/Misyonumuz";
 import ContactPage from "./pages/Iletisim";
 import BlogSix from "./Kişiler/Fatih/comp/BlogSix";
-import Product from "./Kişiler/Fatih/comp/Product";
+import Product from "./Kişiler/Fatih/Pagesss/ürünler/Product";
+import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
 
 function App() {
   useEffect(() => {
@@ -40,19 +40,28 @@ function App() {
           element={<HomeDefault />}
         />
         <Route
-          path={`${process.env.PUBLIC_URL}/kabin`}
+          path={`${process.env.PUBLIC_URL}/ürünler/:type`}
           exact
-          element={<BlogSix/>}
+          element={<BlogSix />}
         />
-       
+
         <Route
           path={`${process.env.PUBLIC_URL}/ürünler`}
           exact
           element={<Product />}
         />
-        <Route path={`${process.env.PUBLIC_URL}/asansör`} exact element={<AsansörSistemleri />} />
-         <Route path={`${process.env.PUBLIC_URL}/asansörDetail`} exact element={<AsansörDetail />} />
-      
+        
+        <Route
+          path={`${process.env.PUBLIC_URL}/asansör`}
+          exact
+          element={<AsansörSistemleri />}
+        />
+        <Route
+          path={`${process.env.PUBLIC_URL}/asansörDetail`}
+          exact
+          element={<AsansörDetail />}
+        />
+
         <Route
           path={`${process.env.PUBLIC_URL}/vizyonumuz`}
           exact
@@ -73,7 +82,7 @@ function App() {
           exact
           element={<ContactPage />}
         />
-        <Route path={`${process.env.PUBLIC_URL}/*`} exact element={<Error />} />
+        {/* <Route path={`${process.env.PUBLIC_URL}/*`} exact element={<Error />} /> */}
       </Routes>
       <ScrollToTop
         className="scrollUp"

@@ -35,7 +35,7 @@ const Nav = () => {
                     <li className="dropdown">
                         <Link to={process.env.PUBLIC_URL + `/ürünler`}>Ürünler</Link>
                         <ul>
-                            <li><Link to={process.env.PUBLIC_URL + `/kabin`}>Kabinler</Link></li>
+                            <li><Link to={process.env.PUBLIC_URL + `/ürünler/kabin`}>Kabinler</Link></li>
                             <li className="dropdown">
                                 <Link to={process.env.PUBLIC_URL + `/multistory-build`}>Kapılar</Link>
                                 <ul>
