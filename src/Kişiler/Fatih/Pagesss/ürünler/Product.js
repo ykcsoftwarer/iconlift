@@ -2,12 +2,12 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import HeaderThree from "../../../../common/header/HeaderThree";
-import { liftApi } from "../../../../data/data";
+import liftApi from "../../../../data/data";
 
 const Product = () => {
   const api = liftApi;
 
-  console.log("deneme", api);
+ 
 
   let publicUrl = process.env.PUBLIC_URL + "/";
   return (
