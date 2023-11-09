@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import WOW from "wowjs";
@@ -22,10 +22,14 @@ import MetrialManagment from "./pages/Misyonumuz";
 import ContactPage from "./pages/Iletisim";
 
 import Product from "./Kişiler/Fatih/Pagesss/ürünler/Product";
-
-import ProductDetail from "./Kişiler/Fatih/comp/ProductDetail";
+import ProductDetail from "./Kişiler/Fatih/Pagesss/ürünler/ProductDetail";
+import liftApi from "./data/data";
 
 function App() {
+  const [data, setdata] = useState();
+  const dataFecth = liftApi
+    
+  console.log(dataFecth);
   useEffect(() => {
     new WOW.WOW({
       live: false,
@@ -43,15 +47,15 @@ function App() {
         <Route
           path={`${process.env.PUBLIC_URL}/ürünler/:type`}
           exact
-          element={<ProductDetail />}
+          element={<ProductDetail  />}
         />
 
         <Route
           path={`${process.env.PUBLIC_URL}/ürünler`}
           exact
-          element={<Product />}
+          element={<Product  />}
         />
-        
+
         <Route
           path={`${process.env.PUBLIC_URL}/asansör`}
           exact
