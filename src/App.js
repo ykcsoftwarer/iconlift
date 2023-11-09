@@ -20,9 +20,10 @@ import GeneralContracting from "./pages/Vizyonumuz";
 import ServicesPage from "./pages/Hakkimizda";
 import MetrialManagment from "./pages/Misyonumuz";
 import ContactPage from "./pages/Iletisim";
-import BlogSix from "./Kişiler/Fatih/comp/BlogSix";
+
 import Product from "./Kişiler/Fatih/Pagesss/ürünler/Product";
-import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
+
+import ProductDetail from "./Kişiler/Fatih/comp/ProductDetail";
 
 function App() {
   useEffect(() => {
@@ -42,7 +43,7 @@ function App() {
         <Route
           path={`${process.env.PUBLIC_URL}/ürünler/:type`}
           exact
-          element={<BlogSix />}
+          element={<ProductDetail />}
         />
 
         <Route
