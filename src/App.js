@@ -47,7 +47,7 @@ function App() {
         <Route
           path={`${process.env.PUBLIC_URL}/ürünler/:type`}
           exact
-          element={<ProductDetail  />}
+          element={<ProductDetail/>}
         />
 
         <Route

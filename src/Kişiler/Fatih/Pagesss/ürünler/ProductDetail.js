@@ -14,7 +14,7 @@ const ProductDetail = () => {
     const api = liftApi
     
     const filteredData = api?.find(item => item.type == type);
-    const kabinlerProducts = type ? filteredData.products : [];
+    const kabinlerProducts =  filteredData.products ;
 
      
     console.log("denem12",kabinlerProducts);
