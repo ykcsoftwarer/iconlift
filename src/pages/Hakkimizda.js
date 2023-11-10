@@ -15,9 +15,6 @@ const ServicesPage = () => {
             <HeaderThree />
             <HakkimizdaDetail />
             <WhyChooseFour />
-            {/* <ProjectOne /> */}
-            {/* <ServiceFour /> */}
-            {/* <BrandOne /> */}
             <FooterOne />
         </>
     )
