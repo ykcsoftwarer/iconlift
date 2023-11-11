@@ -41,12 +41,12 @@ const ProductDetail = () => {
                                         <div className="col-xl-7">
                                             <div className="blog-list__single-content">
                                                
-                                                <h2><Link to={process.env.PUBLIC_URL + `/blog-details`}>{item.name}</Link>
+                                                <h2><Link to={process.env.PUBLIC_URL + `/ürünler/${type}/${item.name}`}>{item.name}</Link>
                                                 </h2>
                                                 <p>There are many variations of passages of Lorem Ipsum available, but
                                                     majority have suffered alteration in some form, by injected humour</p>
                                                 <div className="btn-box">
-                                                    <Link to={process.env.PUBLIC_URL + `/blog-details`}>Read More <span className="icon-plus-sign"></span></Link>
+                                                    <Link to={process.env.PUBLIC_URL + `/ürünler/${type}/${item.name}`}>Read More <span className="icon-plus-sign"></span></Link>
                                                 </div>
                                             </div>
                                         </div>

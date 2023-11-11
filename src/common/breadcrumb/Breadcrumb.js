@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 export default class Breadcrumb extends React.Component {
     render(){
         let heading = this.props.heading;
+        const product =this.props.product
         let publicUrl = process.env.PUBLIC_URL+'/'
         let currentPage = this.props.currentPage ? this.props.currentPage : heading
         let Img = this.props.Img ? this.props.Img :'page-header-img.jpg'
@@ -21,6 +22,7 @@ export default class Breadcrumb extends React.Component {
                                             <ul>
                                                 <li><Link to={process.env.PUBLIC_URL + `/`}>Home</Link></li>
                                                 <li>{currentPage}</li>
+                                                <li>{product}</li>
                                             </ul>
                                         </div>
                                     </div>
