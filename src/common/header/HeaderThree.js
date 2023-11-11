@@ -29,7 +29,7 @@ const HeaderThree = () => {
                                             </div>
 
                                             <div className="text">
-                                                <span>Our Location</span>
+                                                <span>Konumumuz</span>
                                                 <p>Fevziçakmak mh. 10762 sk. B-Blok No: 8 B Karatay/Konya</p>
                                             </div>
                                         </li>
@@ -40,7 +40,7 @@ const HeaderThree = () => {
                                             </div>
 
                                             <div className="text">
-                                                <span>Online Support</span>
+                                                <span>Çevrimiçi Destek</span>
                                                 <p className="email"><a href="mailto:info@iconlift.com">info@iconlift.com</a>
                                                 </p>
                                             </div>
@@ -52,7 +52,7 @@ const HeaderThree = () => {
                                             </div>
 
                                             <div className="text">
-                                                <span>Free Contact</span>
+                                                <span>İletisim</span>
                                                 <p className="number"><a href="tel:03325028282">0332 502 82 82</a></p>
                                             </div>
                                         </li>

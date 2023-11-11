@@ -24,6 +24,7 @@ import ContactPage from "./pages/Iletisim";
 import Product from "./Kişiler/Fatih/Pagesss/ürünler/Product";
 import ProductDetail from "./Kişiler/Fatih/Pagesss/ürünler/ProductDetail";
 import liftApi from "./data/data";
+import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
 
 function App() {
   const [data, setdata] = useState();
@@ -47,7 +48,12 @@ function App() {
         <Route
           path={`${process.env.PUBLIC_URL}/ürünler/:type`}
           exact
-          element={<ProductDetail  />}
+          element={<ProductDetail/>}
+        />
+        <Route
+          path={`${process.env.PUBLIC_URL}/ürünler/:type/:name`}
+          exact
+          element={<Details/>}
         />
 
         <Route

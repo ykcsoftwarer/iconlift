@@ -12,10 +12,11 @@ export default class ServiceThree extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-xl-12">
+                                         
                                 <div className="services-three__top">
                                     <div className="sec-title">
                                         <div className="sec-title__tagline">
-                                        <span className="left"></span> <h6>ICONLİFT</h6> <span className="right"></span>
+                                        <span className="left"></span> <h6>İCONLİFT</h6> <span className="right"></span>
                                         </div>
                                         <h2 className="sec-title__title"> <br /> Asansör Sistemleri</h2>
                                     </div>

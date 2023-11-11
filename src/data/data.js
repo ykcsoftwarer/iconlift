@@ -2,6 +2,7 @@
     {
         id: 1,
         type: 'Kabinler',
+        altcat:[ {alt:""},{alt:""}],
         image:"assets/images/site planlaması/lüks asansör kabinleri/Tac Mahal.jpg",
         products: [
           {
@@ -33,6 +34,7 @@
     {
         id: 2,
         type: 'Kapılar',
+        altcat:[ {alt:"Tam"},{alt:"Yarı"}],
         image:"assets/images/site planlaması/Kabin Kapıları/merih-d-tipi-otomatik-katlanir-kabin-kapisi-bsb-asansor-41627-62616-s.jpg",
         products: [
           {
@@ -41,7 +43,7 @@
           },
           {
             name: "Victoria",
-            image: "assets/images/kabinler/victoria.jpg",
+            image: "assets/images/site planlaması/11520221458427.jpg",
           }
         ]
       },
@@ -121,10 +123,11 @@
           }
         ]
       },
+      
      
     {
         id: 7,
-        type: 'Bağkantı Parçaları',
+        type: 'Mekanik Aksamlar',
         image:"assets/images/site planlaması/lüks asansör kabinleri/Tac Mahal.jpg",
         products: [
           {

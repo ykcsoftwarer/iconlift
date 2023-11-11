@@ -1,113 +1,64 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React from "react";
+import { Link, useParams } from "react-router-dom";
 
-export default class IlUrün extends React.Component {
-    componentDidMount() {
 
-        const $ = window.$;
-        
-        if ($(".img-popup").length) {
-            var groups = {};
-            $(".img-popup").each(function () {
-              var id = parseInt($(this).attr("data-group"), 10);
-        
-              if (!groups[id]) {
-                groups[id] = [];
-              }
-        
-              groups[id].push(this);
-            });
-        
-            $.each(groups, function () {
-              $(this).magnificPopup({
-                type: "image",
-                closeOnContentClick: true,
-                closeBtnInside: false,
-                gallery: {
-                  enabled: true,
-                },
-              });
-            });
-        }
-          
-    }
-    render(){
-        let publicUrl = process.env.PUBLIC_URL+'/'
-        return (
-            <>
-                <section className="project-one-sec project-one-sec--three">
-                    
+
+
+const IlUrün = () => {
+    const {name}= useParams()
+    let publicUrl = process.env.PUBLIC_URL + "/";
+  return (
+    <>
+        <section className="faq-one">
                     <div className="container">
                         <div className="row">
-                            {/* Start project One Single */}
-                            <div className="col-xl-4 col-lg-4">
-                                <div className="project-one__single wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                    <div className="project-one__single-img">
-                                        <div className="inner">
-                                            <img src={publicUrl+"assets/images/diğer asansörler/panoramik/854834627272panoramic1.jpg"} alt="" />
-                                            <div className="project-one__link">
-                                                <a className="img-popup" href={publicUrl+"assets/images/diğer asansörler/panoramik/854834627272panoramic1.jpg"}>
-                                                    <span className="icon-plus-sign"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="content-box">
-                                            <h2><Link to={process.env.PUBLIC_URL + `/kabin-detail`}>Texture Interture</Link></h2>
-                                            <p>Building Interior</p>
-                                        </div>
-                                    </div>
+                            {/* Start Faq One Img */}
+                            <div className="col-xl-6">
+                                <div className="faq-one__img wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+                                    <img src={publicUrl+"assets/images/update1.0/faq-v1-img1.jpg"} alt="#" />
                                 </div>
                             </div>
-                            {/* End project One Single */}
+                            {/* End Faq One Img */}
 
-                            {/* Start project One Single */}
-                            <div className="col-xl-4 col-lg-4">
-                                <div className="project-one__single wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                    <div className="project-one__single-img">
-                                        <div className="inner">
-                                            <img src={publicUrl+"assets/images/diğer asansörler/panoramik/1075315325073panoramic2.jpg"} alt="" />
-                                            <div className="project-one__link">
-                                                <a className="img-popup" href={publicUrl+"assets/images/diğer asansörler/panoramik/1075315325073panoramic2.jpg"}>
-                                                    <span className="icon-plus-sign"></span>
-                                                </a>
-                                            </div>
+                            {/* Start Faq One Accordion */}
+                            <div className="col-xl-6">
+                                <div className="faq-one__accordion">
+                                    <div className="sec-title">
+                                        <div className="sec-title__tagline">
+                                            <h6>{name}</h6> <span className="right"></span>
                                         </div>
-                                        <div className="content-box">
-                                            <h2><Link to={process.env.PUBLIC_URL + `/kabin-detail`}>Texture Interture</Link></h2>
-                                            <p>Building Interior</p>
-                                        </div>
+                                        <h2 className="sec-title__title">TEKNİK ÖZELLİKLER</h2>
                                     </div>
+                                    <div className="ürün-table">
+                                            <ul >
+                                                <li> 100% Insurance</li>
+                                                <li>Custom Business Rules</li>
+                                                <li>Professional Design</li>
+                                                <li>Design and Build</li>
+                                                <li>10 Year maintenance</li>
+                                            </ul>
+                                            <hr/>
+                                            <ul >
+                                                <li> 100% Insurance</li>
+                                                <li>Custom Business Rules</li>
+                                                <li>Professional Design</li>
+                                                <li>Design and Build</li>
+                                                <li>10 Year maintenance</li>
+                                            </ul>
+                                            <hr/>
+                                         
+                                        </div>
                                 </div>
                             </div>
-                            {/* End project One Single */}
-
-                            {/* Start project One Single */}
-                            <div className="col-xl-4 col-lg-4">
-                                <div className="project-one__single wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                    <div className="project-one__single-img">
-                                        <div className="inner">
-                                            <img src={publicUrl+"assets/images/diğer asansörler/panoramik/panoramik-asansorleri-41765-8819006482.jpg"} alt="" />
-                                            <div className="project-one__link">
-                                                <a className="img-popup" href={publicUrl+"assets/images/diğer asansörler/panoramik/panoramik-asansorleri-41765-8819006482.jpg"}>
-                                                    <span className="icon-plus-sign"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="content-box">
-                                            <h2><Link to={process.env.PUBLIC_URL + `/kabin-detail`}>Texture Interture</Link></h2>
-                                            <p>Building Interior</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End project One Single */}
-
-                           
-                            
+                            {/* End Faq One Accordion */}
                         </div>
                     </div>
                 </section>
-            </>
-        )
-    }
+      </>
+  )
 }
+
+export default IlUrün
+
+
+

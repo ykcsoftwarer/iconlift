@@ -7,11 +7,11 @@ import { useParams } from "react-router-dom";
 
 
 const Details = () => {
-  const {type}= useParams()
+  const {type , name}= useParams()
   return (
     <>
       <HeaderThree />
-      <Breadcrumb heading="Lüks Kabin" currentPage={type} />
+      <Breadcrumb heading={type} currentPage={type} product={name}/>
       <IlUrün />
       <FooterOne />
 
