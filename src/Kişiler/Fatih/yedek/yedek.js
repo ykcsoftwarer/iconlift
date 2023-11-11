@@ -298,4 +298,117 @@
                   </div>
                 </div>
               </div>
+
+                      {/* Navbar  Yedek Parça */}
+                      <li className="dropdown">
+            <Link to={process.env.PUBLIC_URL + `/ürünler`}>Yedek Parça</Link>
+            <ul>
+              <li className="dropdown">
+                <Link to={process.env.PUBLIC_URL + `/multistory-build`}>
+                  Bağlantı Parçaları
+                </Link>
+                <ul>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Asansör Kapısı Bağlantı Seti{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Eksentrik Kapı Pateni (H) Model
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Eksentrik Kapı Pateni (X) Model{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kanca Kilit Açma Seti Metal
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kanca Kilit Açma Seti Plastik{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kapı Metal Demiri Düz
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kılıç Mandal Plastiği{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kramer Ayağı
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kramer Kapı ??????{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Panel Askı Seti Uzun
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Plastik Rampa
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Plastik Tampon
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Plastik Paten (X) Model
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Acil Kilit AÇma Halatı(1.5mm)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Acil Kilit AÇma Halatı(3mm)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kurma Yay
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+
+
+
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
