@@ -10907,6 +10907,7 @@ Testimonials Three
     position: relative;
     display: block;
     overflow: hidden;
+    
 }
 
 .pricing-plan-one__single .table-content ul li {
@@ -10919,6 +10920,7 @@ Testimonials Three
     padding-left: 20px;
     margin-bottom: 15px;
     font-family: var(--thm-font);
+    
 }
 
 .pricing-plan-one__single .table-content ul li:last-child {
@@ -10935,7 +10937,54 @@ Testimonials Three
     width: 7px;
     height: 7px;
     border-radius: 50%;
+    
 }
+
+
+ .ürün-table {
+    position: relative;
+    display: block;
+    margin-top: 43px;
+    z-index: 5;
+}
+
+ .ürün-table ul {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    
+}
+
+ .ürün-table ul li {
+    position: relative;
+    display: block;
+    color: var(--thm-gray);
+    font-size: 17px;
+    line-height: 29px;
+    font-weight: 400;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-family: var(--thm-font);
+    
+}
+
+ .ürün-table ul li:last-child {
+    margin-bottom: 0px;
+}
+
+ .ürün-table ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 0;
+    background: var(--thm-base);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    
+}
+
 
 .pricing-plan-one__single .table-footer {
     position: relative;
@@ -11274,10 +11323,12 @@ Cta One
     display: block;
     background: var(--thm-black);
     overflow: hidden;
+    
 }
 
 .blog-list__single-img img {
     width: 100%;
+   
     transform: scale(1.0);
     transition: all 0.3s ease-in-out 0.1s opacity .2s ease-in;
     transition-delay: .1s;
