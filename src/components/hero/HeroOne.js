@@ -48,7 +48,7 @@ export default class HeroOne extends React.Component {
                                     <div className="col-xl-12">
                                         <div className="slider-one__single-content">
                                             <h3>ICONLİFT</h3>
-                                            <h2>Sizler için üretiyoruz<br /></h2>
+                                            <h2>Sizler İçin Kaliteyi Yakalıyoruz<br /></h2>
                                             <p>
                                                 Motivasyonumuzu müşterilerimizin memnuniyetinden alıyoruz...
                     
