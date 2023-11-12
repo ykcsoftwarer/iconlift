@@ -46,7 +46,7 @@ export default class SingleGeneralContracting extends React.Component {
           <div className="container">
             <div className="row">
               {/* Start Services Details Content */}
-              <div className="col-xl-7 col-lg-7">
+              <div className="col-xl-12 col-lg-12">
                 <div className="services-details__content">
                   <div className="services-details__img1">
                     <img
@@ -96,64 +96,6 @@ export default class SingleGeneralContracting extends React.Component {
                   </div>
                 </div>
               </div>
-              {/* End Services Details Content */}
-
-              {/* Start Services Details Sidebar */}
-              <div className="col-xl-5 col-lg-5">
-                <div className="services-details__sidebar">
-                  <ServiceSearch />
-
-                  {/* Start Services Details Sidebar Single */}
-                  <div className="services-details__sidebar-single services-details-category">
-                    <div className="title">
-                      <h2>Services Category</h2>
-                    </div>
-                    <ul className="services-details-category-list">
-                      <li>
-                        <Link
-                          to={process.env.PUBLIC_URL + `/general-contracting`}
-                          className="active"
-                        >
-                          General Contracting
-                          <span className="icon-right-arrow"></span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={process.env.PUBLIC_URL + `/metrial-managment`}
-                        >
-                          Metrial Managment
-                          <span className="icon-right-arrow"></span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={process.env.PUBLIC_URL + `/building-renovation`}
-                        >
-                          Building Renovation
-                          <span className="icon-right-arrow"></span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={process.env.PUBLIC_URL + `/architecture-design`}
-                        >
-                          Architecture Design
-                          <span className="icon-right-arrow"></span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to={process.env.PUBLIC_URL + `/multistory-build`}>
-                          Multistory Build
-                          <span className="icon-right-arrow"></span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* End Services Details Sidebar Single */}
-                </div>
-              </div>
-              {/* End Services Details Sidebar */}
             </div>
           </div>
         </section>
