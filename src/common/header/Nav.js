@@ -137,14 +137,14 @@ const Nav = () => {
             <ul>
               <li>
                 <Link to={process.env.PUBLIC_URL + `/hakkimizda`}>
-                  Hakımzda
+                 Hakkımızda
                 </Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + `/vizyonumuz`}>Vizyon</Link>
+                <Link to={process.env.PUBLIC_URL + `/vizyonumuz`}>Vizyonumuz</Link>
               </li>
               <li>
-                <Link to={process.env.PUBLIC_URL + `/misyonmuz`}>Misyon</Link>
+                <Link to={process.env.PUBLIC_URL + `/misyonmuz`}>Misyonumuz</Link>
               </li>
             </ul>
           </li>

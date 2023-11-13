@@ -47,7 +47,11 @@ export default class HeroOne extends React.Component {
                                 <div className="row clearfix">
                                     <div className="col-xl-12">
                                         <div className="slider-one__single-content">
+<<<<<<< HEAD
                                             <h3>İCONLİFT</h3>
+=======
+                                            <h3>ICONLİFT</h3>
+>>>>>>> 086e1a7ec0b30f0641e5756d1a26dd77a278b807
                                             <h2>Sizler İçin Kaliteyi Yakalıyoruz<br /></h2>
                                             <p>
                                                 Motivasyonumuzu müşterilerimizin memnuniyetinden alıyoruz...
