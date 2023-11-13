@@ -13,7 +13,7 @@ const MetrialManagment = () => {
             
             <MisyonumuzinDetail />
             <MisyonumuzDetail />
-            <BrandOne />
+            {/* <BrandOne /> */}
             <FooterOne />
         </>
     )

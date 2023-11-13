@@ -16,6 +16,8 @@ export default class FeatureTwo extends React.Component {
                 "assets/images/backgrounds/benefits-v1-bg.jpg)",
             }}
           ></div>
+
+
           <div className="shape3 float-bob-y">
             <img
               src={publicUrl + "assets/images/shapes/feature-v2-shape1.png"}
@@ -24,17 +26,9 @@ export default class FeatureTwo extends React.Component {
           </div>
           <div className="container">
             <div className="sec-title text-center">
-              <h1>HAKKIMIZDA</h1>
+              <h1>Tüm Talep ve Şikayetleriniz için 7/24 Hizmetinizdeyiz.</h1>
             </div>
-            <h5>
-              "İconlift Asansör, Konya'da kurulmuş, asansör sektöründe kaliteli
-              ve güvenli ürünler tedarik eden ve ihraç eden bir firmadır.
-              Müşterilerimizin can ve mal güvenliğini sağlamak, yaşam kalitesini
-              arttırmak ve ülke ekonomisine katkıda bulunmak vizyonumuzun
-              temelini oluşturmaktadır. Koşulsuz müşteri memnuniyeti ilkesiyle
-              çalışan tecrübeli ve profesyonel ekibimiz, yurtiçi ve yurtdışında
-              asansör hizmeti vermektedir. "{" "}
-            </h5>
+            
           </div>
         </section>
       </>
