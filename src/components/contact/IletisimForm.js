@@ -7,11 +7,12 @@ export default class ContactForm extends React.Component {
                 <div className="contact-page">
                     <div className="container">
                         <div className="row">
-                            <div className="col-xl-4 col-lg-4 col-md-5">
-                                <div className="contact-page__content">
-                                    <div className="title">
-                                        <h2>ICONLIFT ASANSÖR OTOMOTİV İTH. İHR. LTD. ŞTİ.</h2>
+                        <div className="sec-title text-center">
+                                        <h1>İCONLİFT ASANSÖR OTOMOTİV İTH. İHR. LTD. ŞTİ.</h1>
                                     </div>
+                            <div className="col-xl-4 col-lg-4 col-md-5"><br/>
+                                <div className="contact-page__content">
+                                 
 
                                     <div className="contact-page__content-single">
                                         <div className="contact-page__content-single-inner">
@@ -20,7 +21,7 @@ export default class ContactForm extends React.Component {
                                             </div>
 
                                             <div className="content-box">
-                                                <h2>Address</h2>
+                                                <h3>Address</h3>
                                                 <p>Fevziçakmak mh. 10762 sk. B-Blok No : 8 B Karatay / Konya</p>
                                             </div>
                                         </div>
@@ -33,7 +34,7 @@ export default class ContactForm extends React.Component {
                                             </div>
 
                                             <div className="content-box">
-                                                <h2>Phone</h2>
+                                                <h3>Phone</h3>
                                                 <p className="number1"><a href="tel:123456789">0332 502 82 82</a></p>
                                                 <p className="number2"><a href="tel:123456789">0506 502 82 82</a></p>
                                             </div>
@@ -47,7 +48,7 @@ export default class ContactForm extends React.Component {
                                             </div>
 
                                             <div className="content-box">
-                                                <h2>Email </h2>
+                                                <h3>Email </h3>
                                                 <p className="email1"><a href="mailto:info@madina.com">info@iconlift.com.tr</a></p>
                                                 <p className="email2"><a href="mailto:info@madina.com">muhasebe@iconlift.com.tr</a></p>
                                                 <p className="email2"><a href="mailto:info@madina.com">foreingtradesalesmanager@iconlift.com.tr</a></p>
