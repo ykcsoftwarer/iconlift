@@ -150,7 +150,7 @@ export default class ServiceThree extends React.Component {
                                         <span className="icon-painting"></span>
                                     </div>
                                     <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Diğer Asansör Çeşitleri</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
+                                    <p>Lorem  is simply free text dolor amett consec adipisc.</p>
                                     <div className="btn-box">
                                         <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
                                     </div>
