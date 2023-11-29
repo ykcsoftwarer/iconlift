@@ -103,33 +103,95 @@ const Nav = () => {
             </ul>
           </li>
           <li className="dropdown">
-            <Link to={process.env.PUBLIC_URL + `/ürünler`}>Yedek Parça</Link>
-            <ul>
-              {api.map((item) => {
-                const altcat= item.altcat
-                return (
-                  <>
-                    <li>
-                      <Link to={process.env.PUBLIC_URL + `/ürünler/${item.type}`}>
-                        {item.type}
-                      </Link>
-                      {altcat ? <></> : altcat?.map(items =>{
-                        return (
-                            <ul>
+          <Link to={process.env.PUBLIC_URL + `/ürünler`}>Yedek Parça</Link>
+          <ul>
+              <li className="dropdown">
+                <Link to={process.env.PUBLIC_URL + `/multistory-build`}>
+                  Bağlantı Parçaları
+                </Link>
+                
                   <li>
                     <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
-                     {items}
+                      Asansör Kapısı Bağlantı Seti{" "}
                     </Link>
-                    
-                  </li></ul>
-                        )
-                      })}
-                    </li>
-                  
-                  </>
-                );
-              })}
-             
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Eksentrik Kapı Pateni (H) Model
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Eksentrik Kapı Pateni (X) Model{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kanca Kilit Açma Seti Metal
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kanca Kilit Açma Seti Plastik{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kapı Metal Demiri Düz
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kılıç Mandal Plastiği{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kramer Ayağı
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kramer Kapı 41100{" "}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Panel Askı Seti Uzun
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Plastik Rampa
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Plastik Tampon
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Plastik Paten (X) Model
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Acil Kilit AÇma Halatı(1.5mm)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Acil Kilit AÇma Halatı(3mm)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={process.env.PUBLIC_URL + `/architecture-design`}>
+                      Kurma Yay
+                    </Link>
+                  </li>
+              
+              </li>
             </ul>
           </li>
           <li className="dropdown">
