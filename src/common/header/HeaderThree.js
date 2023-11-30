@@ -8,6 +8,7 @@ import SearchButton from './SearchButton';
 import LogoBox from './LogoBox';
 
 const HeaderThree = () => {
+    
     return (
         <>
             <header className="main-header main-header-one clearfix">
