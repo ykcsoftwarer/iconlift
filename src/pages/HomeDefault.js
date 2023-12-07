@@ -23,7 +23,7 @@ const HomeDefault = () => {
             <AboutFour />
             <ProjectThree />
             <FeatureFour />
-            <FeatureThree />
+            {/* <FeatureThree /> */}
         
             <FooterOne />
         </>
