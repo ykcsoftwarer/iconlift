@@ -6,6 +6,7 @@ import MobileMenu from './MobileMenu';
 import OffCanvasStyleOne from './OffCanvasStyleOne';
 import SearchButton from './SearchButton';
 import LogoBox from './LogoBox';
+import DenemeNav from '../../Kişiler/Fatih/comp/Nav';
 
 const HeaderThree = () => {
     
@@ -80,7 +81,9 @@ const HeaderThree = () => {
                                             <div className="stricky-one-logo">
                                                 <LogoWhite />
                                             </div>
-                                            <Nav />
+                                            <DenemeNav />
+
+                                            {/* <Nav /> */}
                                         </div>
                                     </nav>
                                 </div>

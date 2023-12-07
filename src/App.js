@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import WOW from "wowjs";
@@ -25,12 +25,14 @@ import Product from "./Kişiler/Fatih/Pagesss/ürünler/Product";
 import ProductDetail from "./Kişiler/Fatih/Pagesss/ürünler/ProductDetail";
 import liftApi from "./data/data";
 import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
+import { useIconContext } from "./context/Context";
 
 function App() {
   const [data, setdata] = useState();
+  const{menü}=useIconContext()
   const dataFecth = liftApi
     
-  console.log(dataFecth);
+
   useEffect(() => {
     new WOW.WOW({
       live: false,
