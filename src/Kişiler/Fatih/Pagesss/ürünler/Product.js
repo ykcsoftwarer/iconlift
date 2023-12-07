@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HeaderThree from "../../../../common/header/HeaderThree";
 import liftApi from "../../../../data/data";
+import FooterOne from "../../../../common/footer/FooterOne";
 
 const Product = () => {
   const api = liftApi;
@@ -63,6 +64,7 @@ const Product = () => {
           </div>
         </div>
       </section>
+      <FooterOne />
     </>
   );
 };
