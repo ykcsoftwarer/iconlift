@@ -4,7 +4,7 @@ import liftApi from "../../data/data";
 
 const Nav = () => {
   const api = liftApi;
-    console.log(api[0].altcat);
+   
   return (
     <div className="main-menu text-center">
       <nav>

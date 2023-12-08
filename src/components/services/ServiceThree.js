@@ -28,15 +28,18 @@ export default class ServiceThree extends React.Component {
                         <div className="row">
                             {/* Start Services One Single */}
                             <div className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="services-three__single active">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
+                                <div className="services-three__single">
+                                    <div className="services-three__single__bg"
+                                     style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/yolcu.jpg)'}}
+                                    ></div>
                                     <div className="services-three__single-icon">
                                         <span className="icon-crane"></span>
                                     </div>
                                     <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Yolcu Asansörü</Link></h3>
                                     <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
                                     <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
+                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}>
+                                            <span className="icon-right-arrow"></span></Link>
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +48,10 @@ export default class ServiceThree extends React.Component {
                             {/* Start Services One Single */}
                             <div className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
+                                    <div className="services-three__single__bg" 
+                                    style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/yükAsansörü.jpg)'}}>
+
+                                    </div>
                                     <div className="services-three__single-icon">
                                         <span className="icon-interior-design-1"></span>
                                     </div>
@@ -61,7 +67,7 @@ export default class ServiceThree extends React.Component {
                             {/* Start Services One Single */}
                             <div className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
+                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/hidrolikAsansör.jpg)'}}></div>
                                     <div className="services-three__single-icon">
                                         <span className="icon-surgery"></span>
                                     </div>
@@ -79,7 +85,7 @@ export default class ServiceThree extends React.Component {
                             {/* Start Services One Single */}
                             <div className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
+                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/lüksAsansör.jpg)'}}></div>
                                     <div className="services-three__single-icon">
                                         <span className="icon-painting"></span>
                                     </div>
@@ -94,7 +100,7 @@ export default class ServiceThree extends React.Component {
                             {/* Start Services One Single */}
                             <div className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
+                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/yapayzeka.jpg)'}}></div>
                                     <div className="services-three__single-icon">
                                         <span className="icon-painting"></span>
                                     </div>
@@ -109,7 +115,7 @@ export default class ServiceThree extends React.Component {
                               {/* Start Services One Single */}
                               <div className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
+                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/makineDaireli2.jpg)'}}></div>
                                     <div className="services-three__single-icon">
                                         <span className="icon-painting"></span>
                                     </div>
@@ -124,7 +130,7 @@ export default class ServiceThree extends React.Component {
                             {/* Start Services One Single */}
                             <div className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
+                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/makineDairesiz5.jpg)'}}></div>
                                     <div className="services-three__single-icon">
                                         <span className="icon-painting"></span>
                                     </div>
@@ -139,11 +145,11 @@ export default class ServiceThree extends React.Component {
                             {/* Start Services One Single */}
                             <div className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
+                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/diğerAsansör.jpg)'}}></div>
                                     <div className="services-three__single-icon">
                                         <span className="icon-painting"></span>
                                     </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Diğer Asansörler Çeşitleri</Link></h3>
+                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Diğer Asansör Çeşitleri</Link></h3>
                                     <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
                                     <div className="btn-box">
                                         <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>

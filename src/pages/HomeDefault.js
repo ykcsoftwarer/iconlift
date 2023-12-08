@@ -22,8 +22,11 @@ const HomeDefault = () => {
             <ServiceThree />
             <AnasayfaVideo />
             <ProjectThree />
+
             <AnasayfaHakk />
             <FeatureThree />
+           
+            {/* <FeatureFour /> */}
         
             <FooterOne />
         </>
