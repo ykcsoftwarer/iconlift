@@ -10,14 +10,14 @@ import liftApi from '../../../../data/data';
 
 const ProductDetail = () => {
     let publicUrl = process.env.PUBLIC_URL+'/'
-    const {type}=useParams()
-    const api = liftApi
+    const {slug}=useParams()
+    // const api = liftApi
     
-    const filteredData = api?.find(item => item.type == type);
-    const kabinlerProducts =  filteredData.products ;
+    // const filteredData = api?.find(item => item.slug == slug);
+    // const kabinlerProducts =  filteredData.products ;
 
      
-    console.log("denem12",kabinlerProducts);
+    console.log("denem12",slug);
     return (
         <>
         <HeaderThree />
@@ -25,10 +25,10 @@ const ProductDetail = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-8 col-lg-7">
-                        <h1>{type.toLocaleUpperCase()}</h1>
+                        {/* <h1>{slug.toLocaleUpperCase()}</h1> */}
                             <div className="blog-list__left">
                                 {/* Start Blog List Single */}
-                                {kabinlerProducts?.map((item,index) =>{
+                                {/* {kabinlerProducts?.map((item,index) =>{
                                     return (
                                         <div className="blog-list__single wow animated fadeInUp" data-wow-delay="0.1s" key={index}>
                                     <div className="row">
@@ -41,19 +41,19 @@ const ProductDetail = () => {
                                         <div className="col-xl-7">
                                             <div className="blog-list__single-content">
                                                
-                                                <h2><Link to={process.env.PUBLIC_URL + `/ürünler/${type}/${item.name}`}>{item.name}</Link>
+                                                <h2><Link to={process.env.PUBLIC_URL + `/ürünler/${slug}/${item.name}`}>{item.name}</Link>
                                                 </h2>
                                                 <p>There are many variations of passages of Lorem Ipsum available, but
                                                     majority have suffered alteration in some form, by injected humour</p>
                                                 <div className="btn-box">
-                                                    <Link to={process.env.PUBLIC_URL + `/ürünler/${type}/${item.name}`}>Read More <span className="icon-plus-sign"></span></Link>
+                                                    <Link to={process.env.PUBLIC_URL + `/ürünler/${slug}/${item.name}`}>Read More <span className="icon-plus-sign"></span></Link>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                     )
-                                })}
+                                })} */}
                                 {/* End Blog List Single */}
 
                               

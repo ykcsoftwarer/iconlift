@@ -30,9 +30,8 @@ import { useIconContext } from "./context/Context";
 function App() {
   const [data, setdata] = useState();
   const{menü}=useIconContext()
-  const dataFecth = liftApi
-    
-
+  
+  console.log("meün app", menü);
   useEffect(() => {
     new WOW.WOW({
       live: false,
@@ -41,61 +40,62 @@ function App() {
   return (
     <Router>
       <ScrollToTopRoute />
+      
       <Routes>
         <Route
-          path={`${process.env.PUBLIC_URL}/`}
+          path={`/index`}
           exact
           element={<HomeDefault />}
         />
         <Route
-          path={`${process.env.PUBLIC_URL}/ürünler/:type`}
+          path={`/urunler/:slug`}
           exact
           element={<ProductDetail/>}
         />
         <Route
-          path={`${process.env.PUBLIC_URL}/ürünler/:type/:name`}
+          path={`/urunler/:type/:name`}
           exact
           element={<Details/>}
         />
 
         <Route
-          path={`${process.env.PUBLIC_URL}/ürünler`}
+          path={`/urunler`}
           exact
           element={<Product  />}
         />
 
         <Route
-          path={`${process.env.PUBLIC_URL}/asansör`}
+          path={`/asansor-cesitleri`}
           exact
           element={<AsansörSistemleri />}
         />
         <Route
-          path={`${process.env.PUBLIC_URL}/asansörDetail`}
+          path={`/asansor-cesitleri/:slug`}
           exact
           element={<AsansörDetail />}
         />
 
         <Route
-          path={`${process.env.PUBLIC_URL}/vizyonumuz`}
+          path={`/vizyonumuz`}
           exact
           element={<GeneralContracting />}
         />
         <Route
-          path={`${process.env.PUBLIC_URL}/misyonmuz`}
+          path={`/misyonmuz`}
           exact
           element={<MetrialManagment />}
         />
         <Route
-          path={`${process.env.PUBLIC_URL}/hakkimizda`}
+          path={`/hakkimizda`}
           exact
           element={<ServicesPage />}
         />
         <Route
-          path={`${process.env.PUBLIC_URL}/iletisim`}
+          path={`/iletisim`}
           exact
           element={<ContactPage />}
         />
-        {/* <Route path={`${process.env.PUBLIC_URL}/*`} exact element={<Error />} /> */}
+        {/* <Route path={`/*`} exact element={<Error />} /> */}
       </Routes>
       <ScrollToTop
         className="scrollUp"
