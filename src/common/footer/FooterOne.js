@@ -19,7 +19,7 @@ export default class FooterOne extends React.Component {
                                             <div className="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
                                                 <div className="footer-widget__column footer-widget__about">
                                                     <div className="footer-widget__about-logo">
-                                                        <Link to="/"><img src={publicUrl+"assets/images/resources/logo-1.png"} alt="Logo" /></Link>
+                                                        <Link to="/"><img src={publicUrl+"assets/images/logo/iconlift_logo3"} alt="Logo" /></Link>
                                                     </div>
 
                                                     <p className="footer-widget__about-text">Duis aute irure dolor in reprehenderit
@@ -135,7 +135,7 @@ export default class FooterOne extends React.Component {
                                 <div className="col-xl-12">
                                     <div className="footer-one__bottom-inner">
                                         <div className="footer-one__bottom-text">
-                                            <p>Copyright &copy;2022. All rights reserved to <Link to="/">Const</Link></p>
+                                            <p>Copyright &copy;2022. All rights reserved to <Link to="/">Dykhf</Link></p>
                                         </div>
 
                                         <div className="footer-one__bottom-list">
@@ -156,3 +156,5 @@ export default class FooterOne extends React.Component {
         )
     }
 }
+
+
