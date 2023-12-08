@@ -11,9 +11,10 @@ export function useIconContext() {
 export function IconProvider({ children }) {
   const [menü, setMenü] = useState([]);
   const [lang, setLang] = useState("tr");
-  const [example3, setExample3] = useState([]);
-
-  const fetchData = async () => {
+  const [data, setData] = useState([]);
+  const [langData, setLangData] = useState([]);
+  
+  const fetchMenüData = async () => {
     try {
       if(lang == "tr") {
 
@@ -22,9 +23,14 @@ export function IconProvider({ children }) {
         );
         setMenü(responseMenü.data.data)
       }
-      else if(lang=="en"){
+      else if(lang =="en"){
         const responseMenü = await axios.get(
           "https://iconlift.com.tr/api/v1/menu.php?lang=en&token=ClKROBblaxToDgTAaykLumdfvPEcAeKXG6e4Wj3W4HIEOF7qrz7fvOekBGu1nhWcWwTEhIo6ETkddb3a08ee4dafd32007b4304d1992383b"
+        );
+        setMenü(responseMenü.data.data)
+      }else{
+        const responseMenü = await axios.get(
+          "https://iconlift.com.tr/api/v1/menu.php?lang=tr&token=ClKROBblaxToDgTAaykLumdfvPEcAeKXG6e4Wj3W4HIEOF7qrz7fvOekBGu1nhWcWwTEhIo6ETkddb3a08ee4dafd32007b4304d1992383b"
         );
         setMenü(responseMenü.data.data)
       }
@@ -32,15 +38,43 @@ export function IconProvider({ children }) {
       console.log(error);
     }
   };
-  useEffect(() => {
-    fetchData()
-  }, [lang]);
   
+  const fetchData = async () => {
+    try {
+      const responseMenü = await axios.get(
+        `https://iconlift.com.tr/api/v1/page.php?slug=index&lang=${lang}&token=ClKROBblaxToDgTAaykLumdfvPEcAeKXG6e4Wj3W4HIEOF7qrz7fvOekBGu1nhWcWwTEhIo6ETkddb3a08ee4dafd32007b4304d1992383b`
+      );
+      
+      return setData(responseMenü.data)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const fetchLangData = async () => {
+    try {
+      const responseMenü = await axios.get(
+        `https://iconlift.com.tr/api/v1/translations.php?lang=${lang}&token=ClKROBblaxToDgTAaykLumdfvPEcAeKXG6e4Wj3W4HIEOF7qrz7fvOekBGu1nhWcWwTEhIo6ETkddb3a08ee4dafd32007b4304d1992383b `
+      );
+      
+      return setLangData(responseMenü.data)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+ 
+  useEffect(() => {
+    fetchMenüData()
+    fetchData()
+    fetchLangData()
+   
+  }, [lang]);
+  console.log("data=>",data);
   const contextValue = {
     menü,
     lang,
-    example3,
-
+    data,
+    langData,
     setLang,
   };
 
