@@ -44,7 +44,7 @@ const ProductDetail = () => {
                                         <div className="col-xl-7">
                                             <div className="blog-list__single-content">
                                                
-                                                <h2><Link to={`/urunler/${slug}/${item?.url}`}>{item?.title2}</Link>
+                                                <h2><Link to={`/urunler/${slug}/${item?.url}`}>{item?.title1}</Link>
                                                 </h2>
                                                 <p>{item?.content1}</p>
                                                 <div className="btn-box">
