@@ -12,9 +12,22 @@ export function IconProvider({ children }) {
   const [menü, setMenü] = useState([]);
   const [lang, setLang] = useState("tr");
   const [data, setData] = useState([]);
+  const [page, setPage] = useState([]);
   const [langData, setLangData] = useState([]);
   
- 
+  const fetchPageData = async (item="index") => {
+    try {
+      const responseMenü = await axios.get(
+        `https://iconlift.com.tr/api/v1/page.php?slug=${item}&lang=${lang}&token=ClKROBblaxToDgTAaykLumdfvPEcAeKXG6e4Wj3W4HIEOF7qrz7fvOekBGu1nhWcWwTEhIo6ETkddb3a08ee4dafd32007b4304d1992383b`
+      );
+      
+      return setPage(responseMenü.data)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   const fetchData = async () => {
     try {
       const responseMenü = await axios.get(
@@ -26,6 +39,7 @@ export function IconProvider({ children }) {
       console.log(error);
     }
   };
+  
   const fetchLangData = async () => {
     try {
       const responseMenü = await axios.get(
@@ -56,13 +70,15 @@ export function IconProvider({ children }) {
     fetchLangData()
    
   }, [lang]);
-  console.log("data=>",data);
+  
   const contextValue = {
     menü,
     lang,
     data,
     langData,
     setLang,
+    fetchPageData,
+    page,
   };
 
   return (
