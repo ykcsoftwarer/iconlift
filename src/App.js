@@ -48,6 +48,12 @@ function App() {
           element={<HomeDefault />}
         />
         <Route
+          path={`/urunler`}
+          exact
+          element={<Product  />}
+        />
+
+        <Route
           path={`/urunler/:slug`}
           exact
           element={<ProductDetail/>}
@@ -58,11 +64,7 @@ function App() {
           element={<Details/>}
         />
 
-        <Route
-          path={`/urunler`}
-          exact
-          element={<Product  />}
-        />
+        
 
         <Route
           path={`/asansor-cesitleri`}

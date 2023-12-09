@@ -18,6 +18,7 @@ const Product = () => {
           fetchPageData("products")
       }
   },[lang,slug])
+
   console.log("product",page);
 
   let publicUrl = process.env.PUBLIC_URL + "/";
@@ -44,7 +45,7 @@ const Product = () => {
                     <img
                       src={
                         
-                        e.image
+                        e?.image
                       }
                       alt=""
                     />
@@ -52,17 +53,17 @@ const Product = () => {
                   <div className="blog-one__single-content">
                     <div className="inner-content">
                       <h2>
-                        <Link to={`/urunler/${e.title2}`}>
-                          {e.title1}
+                        <Link to={`/urunler/${e?.title2}`}>
+                          {e?.title1}
                         </Link>
                       </h2>
                       <div className="btn-box">
                         <Link
-                          to={`/urunler/${e.title2}`}
+                          to={`/urunler/${e?.title2}`}
                           className="thm-btn"
-                          data-text= {e.button}
+                          data-text= {e?.button}
                         >
-                         {e.button}
+                         {e?.button}
                         </Link>
                       </div>
                     </div>
