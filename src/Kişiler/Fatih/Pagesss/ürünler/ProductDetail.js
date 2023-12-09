@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Link, useParams} from 'react-router-dom';
 
 import Category from '../../comp/Category';
 import HeaderThree from '../../../../common/header/HeaderThree';
 import liftApi from '../../../../data/data';
+import { useIconContext } from '../../../../context/Context';
 
 
 
 
 const ProductDetail = () => {
-    let publicUrl = process.env.PUBLIC_URL+'/'
-    const {slug}=useParams()
-    // const api = liftApi
-    
-    // const filteredData = api?.find(item => item.slug == slug);
-    // const kabinlerProducts =  filteredData.products ;
-
-     
-    console.log("denem12",slug);
+    const {slug}= useParams()
+    const {fetchPageData, page ,lang}= useIconContext()
+    useEffect(() => {
+        
+            fetchPageData(slug)
+      return ()=>{
+        fetchPageData(slug)
+      }
+    },[lang,slug])
+    console.log("product",page);
+    const modulPage= page?.filter(page => page.modulName=== "module1")
+    console.log("modulPage",modulPage);
     return (
         <>
         <HeaderThree />
@@ -25,35 +29,35 @@ const ProductDetail = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-8 col-lg-7">
-                        {/* <h1>{slug.toLocaleUpperCase()}</h1> */}
+                        <h1>{page[0]["data"].title1}</h1>
                             <div className="blog-list__left">
                                 {/* Start Blog List Single */}
-                                {/* {kabinlerProducts?.map((item,index) =>{
+                                {modulPage?.map((k,index) =>{
+                                    const item= k.data
                                     return (
                                         <div className="blog-list__single wow animated fadeInUp" data-wow-delay="0.1s" key={index}>
                                     <div className="row">
                                         <div className="col-xl-5">
                                             <div className="blog-list__single-img">
-                                                <img src={publicUrl+ item.image} alt="#" />
+                                                <img src={item?.image} alt="#" />
                                             </div>
                                         </div>
 
                                         <div className="col-xl-7">
                                             <div className="blog-list__single-content">
                                                
-                                                <h2><Link to={process.env.PUBLIC_URL + `/ürünler/${slug}/${item.name}`}>{item.name}</Link>
+                                                <h2><Link to={`/ürünler/${slug}/${item?.name}`}>{item?.title2}</Link>
                                                 </h2>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but
-                                                    majority have suffered alteration in some form, by injected humour</p>
+                                                <p>{item?.content1}</p>
                                                 <div className="btn-box">
-                                                    <Link to={process.env.PUBLIC_URL + `/ürünler/${slug}/${item.name}`}>Read More <span className="icon-plus-sign"></span></Link>
+                                                    <Link to={`/ürünler/${slug}/${item?.name}`}>Read More <span className="icon-plus-sign"></span></Link>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                     )
-                                })} */}
+                                })}
                                 {/* End Blog List Single */}
 
                               
