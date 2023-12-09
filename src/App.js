@@ -47,6 +47,13 @@ function App() {
           exact
           element={<HomeDefault />}
         />
+        
+        <Route
+          path={`/urunler`}
+          exact
+          element={<Product  />}
+        />
+
         <Route
           path={`/urunler/:slug`}
           exact
@@ -59,10 +66,23 @@ function App() {
         />
 
         <Route
-          path={`/urunler`}
+          path={`/products`}
           exact
           element={<Product  />}
         />
+
+        <Route
+          path={`/products/:slug`}
+          exact
+          element={<ProductDetail/>}
+        />
+        <Route
+          path={`/products/:slug/:slug`}
+          exact
+          element={<Details/>}
+        />
+
+        
 
         <Route
           path={`/asansor-cesitleri`}

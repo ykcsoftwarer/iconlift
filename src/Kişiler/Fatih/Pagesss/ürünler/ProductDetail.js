@@ -15,9 +15,7 @@ const ProductDetail = () => {
     useEffect(() => {
         
             fetchPageData(slug)
-      return ()=>{
-        fetchPageData(slug)
-      }
+    
     },[lang,slug])
     console.log("product",page);
     const modulPage= page?.filter(page => page.modulName=== "module1")
@@ -46,11 +44,11 @@ const ProductDetail = () => {
                                         <div className="col-xl-7">
                                             <div className="blog-list__single-content">
                                                
-                                                <h2><Link to={`/ürünler/${slug}/${item?.name}`}>{item?.title2}</Link>
+                                                <h2><Link to={`/urunler/${slug}/${item?.url}`}>{item?.title1}</Link>
                                                 </h2>
                                                 <p>{item?.content1}</p>
                                                 <div className="btn-box">
-                                                    <Link to={`/ürünler/${slug}/${item?.name}`}>Read More <span className="icon-plus-sign"></span></Link>
+                                                    <Link to={`/urunler/${slug}/${item?.url}`}>Read More <span className="icon-plus-sign"></span></Link>
                                                 </div>
                                             </div>
                                         </div>
