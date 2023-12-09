@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 
 
 const IlUrün = () => {
-    const {name}= useParams()
+    const {slug}= useParams()
     let publicUrl = process.env.PUBLIC_URL + "/";
   return (
     <>
@@ -25,7 +25,7 @@ const IlUrün = () => {
                                 <div className="faq-one__accordion">
                                     <div className="sec-title">
                                         <div className="sec-title__tagline">
-                                            <h6>{name}</h6> <span className="right"></span>
+                                            <h6>{slug}</h6> <span className="right"></span>
                                         </div>
                                         <h2 className="sec-title__title">TEKNİK ÖZELLİKLER</h2>
                                     </div>
