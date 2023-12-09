@@ -31,7 +31,7 @@ function App() {
   const [data, setdata] = useState();
   const{menü}=useIconContext()
   
-  console.log("meün app", menü);
+  
   useEffect(() => {
     new WOW.WOW({
       live: false,
@@ -53,7 +53,7 @@ function App() {
           element={<ProductDetail/>}
         />
         <Route
-          path={`/urunler/:type/:name`}
+          path={`/urunler/:slug/:slug`}
           exact
           element={<Details/>}
         />

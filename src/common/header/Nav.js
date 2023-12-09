@@ -4,7 +4,7 @@ import { useIconContext } from "../../context/Context";
 
 const Nav = () => {
   const { menü } = useIconContext();
-  console.log("nav",menü);
+
   return (
     <div className="main-menu text-center">
       <nav>
