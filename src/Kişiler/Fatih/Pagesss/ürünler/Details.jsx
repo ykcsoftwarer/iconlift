@@ -1,17 +1,21 @@
 import React from "react";
 import HeaderThree from "../../../../common/header/HeaderThree";
-import Breadcrumb from "../../../../common/breadcrumb/Breadcrumb";
+
 import IlUrün from "../../comp/IlUrün";
 import FooterOne from "../../../../common/footer/FooterOne";
 import { useParams } from "react-router-dom";
+import BreadcrumbProduct from "../../../../common/breadcrumb/BreadcrumbProduct ";
 
 
 const Details = () => {
-  const {type , name}= useParams()
+  const { categorySlug,slug} = useParams();
+ 
+  
+  console.log(categorySlug);
   return (
     <>
       <HeaderThree />
-      <Breadcrumb heading={type} currentPage={type} product={name}/>
+      <BreadcrumbProduct heading={slug} currentPage={categorySlug} product={slug}/>
       <IlUrün />
       <FooterOne />
 

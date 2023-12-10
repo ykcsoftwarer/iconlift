@@ -1,12 +1,21 @@
-import React from "react";
+
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { useIconContext } from "../../../context/Context";
 
 
 
 
 const IlUrün = () => {
     const {slug}= useParams()
-    let publicUrl = process.env.PUBLIC_URL + "/";
+    const {fetchPageData, page ,lang}= useIconContext()
+    useEffect(() => {
+        fetchPageData(slug)
+    },[lang])
+    console.log(slug);
+    const detailData= page[0]["data"]
+    
+
   return (
     <>
         <section className="faq-one">
@@ -15,7 +24,7 @@ const IlUrün = () => {
                             {/* Start Faq One Img */}
                             <div className="col-xl-6">
                                 <div className="faq-one__img wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-                                    <img src={publicUrl+"assets/images/update1.0/faq-v1-img1.jpg"} alt="#" />
+                                    <img src={detailData?.image} alt="#" />
                                 </div>
                             </div>
                             {/* End Faq One Img */}
