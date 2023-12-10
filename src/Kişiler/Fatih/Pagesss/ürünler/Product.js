@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import HeaderThree from "../../../../common/header/HeaderThree";
 import liftApi from "../../../../data/data";
+import FooterOne from "../../../../common/footer/FooterOne";
+import { useIconContext } from "../../../../context/Context";
 
 const Product = () => {
-  const api = liftApi;
+  
+  const {slug}= useParams()
+  const {fetchPageData, page ,lang}= useIconContext()
+  useEffect(() => {
+      if(lang === "tr"){
 
- 
+          fetchPageData("urunler")
+      }else if(lang === "en"){
+          fetchPageData("products")
+      }
+  },[lang,slug])
+
+  console.log("product",page);
 
   let publicUrl = process.env.PUBLIC_URL + "/";
   return (
@@ -17,19 +29,23 @@ const Product = () => {
         <div className="container">
           <div className="row">
 
-          {api.map((e)=>{
+          {page?.map((k,index)=>{
+            const e=k?.data
+            
+            console.log("deeeee",e)
             return(
               <div
               className="col-xl-4 col-lg-4 wow animated fadeInUp"
               data-wow-delay="0.1s"
+              key={index}
             >
               <div className="blog-one__single">
                 <div className="blog-one__single-img">
                   <div className="inner">
                     <img
                       src={
-                        publicUrl +
-                        e.image
+                        
+                        e?.image
                       }
                       alt=""
                     />
@@ -37,17 +53,17 @@ const Product = () => {
                   <div className="blog-one__single-content">
                     <div className="inner-content">
                       <h2>
-                        <Link to={process.env.PUBLIC_URL + `/ürünler/${e.type}`}>
-                          {e.type}
+                        <Link to={`/urunler/${e?.title2}`}>
+                          {e?.title1}
                         </Link>
                       </h2>
                       <div className="btn-box">
                         <Link
-                          to={process.env.PUBLIC_URL + `/ürünler/${e.type}`}
+                          to={`/urunler/${e?.title2}`}
                           className="thm-btn"
-                          data-text="Read More +"
+                          data-text= {e?.button}
                         >
-                          Read More +
+                         {e?.button}
                         </Link>
                       </div>
                     </div>
@@ -63,6 +79,7 @@ const Product = () => {
           </div>
         </div>
       </section>
+      <FooterOne />
     </>
   );
 };

@@ -1,10 +1,10 @@
 import React from "react";
 import HeaderOne from "../common/header/HeaderOne";
 import HeroOne from "../components/hero/HeroOne";
-import AboutFour from '../components/about/AboutFour';
+import AnasayfaVideo from '../components/about/AnasayfaVideo';
 import ProjectThree from "../components/project/ProjectThree";
 import ServiceThree from "../components/services/ServiceThree";
-import FeatureFour from "../components/features/FeatureFour";
+import AnasayfaHakk from "../components/features/AnasayfaHakk";
 import FeatureThree from "../components/features/FeatureThree";
 // import FaqOne from "../components/faq/FaqOne";
 // import TestimonialThree from "../components/testimonial/TestimonialThree";
@@ -20,10 +20,13 @@ const HomeDefault = () => {
             <HeaderOne />
             <HeroOne />
             <ServiceThree />
-            <AboutFour />
+            <AnasayfaVideo />
             <ProjectThree />
-            <FeatureFour />
+
+            <AnasayfaHakk />
             <FeatureThree />
+           
+            {/* <FeatureFour /> */}
         
             <FooterOne />
         </>

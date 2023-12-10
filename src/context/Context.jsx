@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useState} from "react";
-
+import axios from "axios";
+import React, { createContext, useContext, useState, useEffect } from "react";
+ 
 
 const IconContext = createContext();
 
@@ -8,23 +9,76 @@ export function useIconContext() {
 }
 
 export function IconProvider({ children }) {
-  const [example1, setExample1] = useState([]);
-  const [example2, setExample2] = useState([]);
-  const [example3, setExample3] = useState([]);
-
-
-
-
-
-
-  const contextValue = {
-    
-   example1,
-   example2,
-   example3,
+  const [menü, setMenü] = useState([]);
+  const [lang, setLang] = useState("tr");
+  const [data, setData] = useState([]);
+  const [page, setPage] = useState([]);
+  const [langData, setLangData] = useState([]);
   
+  const fetchPageData = async (item="index") => {
+    try {
+      const responseMenü = await axios.get(
+        `https://iconlift.com.tr/api/v1/page.php?slug=${item}&lang=${lang}&token=ClKROBblaxToDgTAaykLumdfvPEcAeKXG6e4Wj3W4HIEOF7qrz7fvOekBGu1nhWcWwTEhIo6ETkddb3a08ee4dafd32007b4304d1992383b`
+      );
+      
+      return setPage(responseMenü.data)
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
 
+  const fetchData = async () => {
+    try {
+      const responseMenü = await axios.get(
+        `https://iconlift.com.tr/api/v1/page.php?slug=index&lang=${lang}&token=ClKROBblaxToDgTAaykLumdfvPEcAeKXG6e4Wj3W4HIEOF7qrz7fvOekBGu1nhWcWwTEhIo6ETkddb3a08ee4dafd32007b4304d1992383b`
+      );
+      
+      return setData(responseMenü.data)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
+  const fetchLangData = async () => {
+    try {
+      const responseMenü = await axios.get(
+        `https://iconlift.com.tr/api/v1/translations.php?lang=${lang}&token=ClKROBblaxToDgTAaykLumdfvPEcAeKXG6e4Wj3W4HIEOF7qrz7fvOekBGu1nhWcWwTEhIo6ETkddb3a08ee4dafd32007b4304d1992383b `
+      );
+      
+      return setLangData(responseMenü.data)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const fetchMenüData = async () => {
+    try {
+        const responseMenü = await axios.get(
+          `https://iconlift.com.tr/api/v1/menu.php?lang=${lang}&token=ClKROBblaxToDgTAaykLumdfvPEcAeKXG6e4Wj3W4HIEOF7qrz7fvOekBGu1nhWcWwTEhIo6ETkddb3a08ee4dafd32007b4304d1992383b`
+        );
+        setMenü(responseMenü.data.data)
+      
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
+ 
+  useEffect(() => {
+    fetchMenüData()
+    fetchData()
+    fetchLangData()
+   
+  }, [lang]);
+  
+  const contextValue = {
+    menü,
+    lang,
+    data,
+    langData,
+    setLang,
+    fetchPageData,
+    page,
   };
 
   return (

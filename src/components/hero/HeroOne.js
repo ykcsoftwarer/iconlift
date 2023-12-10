@@ -1,125 +1,93 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useIconContext } from "../../context/Context";
 
-export default class HeroOne extends React.Component {
-    componentDidMount() {
+const HeroOne = () => {
+  const { data } = useIconContext();
+    const sliderData = data?.find((k)=> k.modulName === "slider")?.data
+    
 
-        const $ = window.$;
-        
-        if ($('.slider-carousel').length) {
-            $('.slider-carousel').owlCarousel({
-              animateOut: 'fadeOut',
-              animateIn: 'fadeIn',
-              loop: true,
-              margin: 0,
-              nav: false,
-              singleItem: true,
-              smartSpeed: 500,
-              autoplay: true,
-              autoplayTimeout: 6000,
-              navText: ['<span class="icon-right-arrow"></span>', '<span class="icon-right-arrow"></span>'],
-              responsive: {
-                0: {
-                  items: 1
-                },
-                600: {
-                  items: 1
-                },
-                1024: {
-                  items: 1
-                }
-              }
-            });
-          }
-          
+    console.log("slider",sliderData);
+  useEffect(() => {
+    const $ = window.$;
+
+    if ($(".slider-carousel").length) {
+      $(".slider-carousel").owlCarousel({
+        animateOut: "fadeOut",
+        animateIn: "fadeIn",
+        loop: true,
+        margin: 0,
+        nav: false,
+        singleItem: true,
+        smartSpeed: 500,
+        autoplay: true,
+        autoplayTimeout: 6000,
+        navText: [
+          '<span class="icon-right-arrow"></span>',
+          '<span class="icon-right-arrow"></span>',
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+          },
+          1024: {
+            items: 1,
+          },
+        },
+      });
     }
-    render(){
-        let publicUrl = process.env.PUBLIC_URL+'/'
-        return (
-            <>
-                <section className="slider-one-sec style3">
-                    <div className="slider-carousel owl-carousel owl-theme">
-                        {/* Start Slider One Single */}
-                        <div className="slider-one__single">
-                            <div className="image-layer" style={{backgroundImage: 'url('+publicUrl+'assets/images/iconLift/ourSliderPicture/sliderImage1.png)'}}>
-                            </div>
-                            <div className="container">
-                                <div className="row clearfix">
-                                    <div className="col-xl-12">
-                                        <div className="slider-one__single-content">
-                                            <h3>ICONLİFT</h3>
-                                            <h2>Sizler İçin Kaliteyi Yakalıyoruz<br /></h2>
-                                            <p>
-                                                Motivasyonumuzu müşterilerimizin memnuniyetinden alıyoruz...
-                    
-                                                 </p>
-                                            <div className="btn-box">
-                                                <Link to={process.env.PUBLIC_URL + `/`} className="thm-btn" data-text="Devamını Oku +">Devamını Oku +</Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* End Slider One Single */}
+  }, []);
 
-                        {/* Start Slider One Single */}
-                        <div className="slider-one__single">
-                            <div className="image-layer" style={{backgroundImage: 'url('+publicUrl+'assets/images/iconLift/ourSliderPicture/liftpicture1.webp)'}}>
-                            </div>
-                            <div className="container pl-0">
-                                <div className="row clearfix">
-                                    <div className="col-xl-12">
-                                        <div className="slider-one__single-content text-center">
-                                            <h3>Türkiye'nin En iyi Asansör Firması</h3>
-                                            <h2>Modern Tarz <br /> 
-                                            Güncel Görünümler</h2>
-                                            <p>ICONLİFT
-                                                
-                                                </p>
-                                            <div className="btn-box">
-                                                <Link to={process.env.PUBLIC_URL + `/`} className="thm-btn" data-text="Devamını Oku +">Devamını Oku+</Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        {/* End Slider One Single */}
+  let publicUrl = process.env.PUBLIC_URL + "/";
 
-                        {/* Start Slider One Single */}
-                        <div className="slider-one__single">
-                            <div className="image-layer" style={{backgroundImage: 'url('+publicUrl+'assets/images/iconLift/ourSliderPicture/iconlift3.jpg)'}}>
-                            </div>
-                            <div className="container">
-                                <div className="row clearfix">
-                                    <div className="col-xl-12">
-                                        <div className="slider-one__single-content">
-                                            <h3>ICONLIFT</h3>
-                                            <h2>Kaliteli Ürünler
-                                                <br />
-                                            Güleryüzlü Hizmet
-                                            
-                                            </h2>
-                                            <p> <br /> 
-                                            
-                                      
-                                                 </p>
-                                            <div className="btn-box">
-                                                <Link to={process.env.PUBLIC_URL + `/`} className="thm-btn" data-text="Devamını Oku +">Devamını Oku+</Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                     
+  return (
+    <>
+      <section className="slider-one-sec style3">
+        <div className="slider-carousel owl-carousel owl-theme">
+          {/* denem */}
+          {sliderData?.map((k, index) => {
+            
+            return (
+              <div className="slider-one__single" key={index}>
+                <div
+                  className="image-layer"
+                  style={{
+                    backgroundImage:
+                      `url(${k.image})`,
+                  }}
+                ></div>
+                <div className="container">
+                  <div className="row clearfix">
+                    <div className="col-xl-12">
+                      <div className="slider-one__single-content">
+                      <h3>{k.title1}</h3>
+                      <h2>{k.title2}</h2>
+                      <p>{k.button}</p>
+                      <div className="btn-box">
+                        <Link
+                          to={k.url}
+                          className="thm-btn"
+                          data-text={k.button}
+                        >
+                          {k.button}
+                        </Link>
                         </div>
-
-                        {/* End Slider One Single */}
+                      </div>
                     </div>
-                </section>
-            </>
-        )
-    }
-}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+         
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default HeroOne;
