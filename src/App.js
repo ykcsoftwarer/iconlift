@@ -60,7 +60,7 @@ function App() {
           element={<ProductDetail/>}
         />
         <Route
-          path={`/urunler/:slug/:slug`}
+          path={`/urunler/:categorySlug/:slug`}
           exact
           element={<Details/>}
         />
@@ -77,7 +77,7 @@ function App() {
           element={<ProductDetail/>}
         />
         <Route
-          path={`/products/:slug/:slug`}
+          path={`/products/:categorySlug/:slug`}
           exact
           element={<Details/>}
         />
