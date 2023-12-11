@@ -14,7 +14,7 @@ const IlUrün = () => {
     },[lang])
     const modulPage = page?.filter((page) => page?.modulName === "productdetails")
     const data = modulPage[0]?.data;
-    console.log("detail",data);
+   
     
     
 

@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import Category from "../Kişiler/Fatih/comp/Category";
-import HeaderThree from "../common/header/HeaderThree";
-import liftApi from "../data/data";
 import { useIconContext } from "../context/Context";
+import HeaderThree from "../common/header/HeaderThree";
+import CategoryProduct from "../Kişiler/Fatih/comp/CategoryProduct";
 
 const ProductDetail = () => {
   const { slug } = useParams();
-  const { fetchPageData, page, lang } = useIconContext();
+  const { fetchPageData, page, lang ,productPath } = useIconContext();
+  
   useEffect(() => {
     fetchPageData(slug);
   }, [lang, slug]);
@@ -49,13 +49,13 @@ const menu = modulPage[0]?.menu;
                         <div className="col-xl-7">
                           <div className="blog-list__single-content">
                             <h2>
-                              <Link to={`/urunler/${slug}/${item?.slug}`}>
+                              <Link to={`/${productPath}/${slug}/${item?.slug}`}>
                                 {item?.title}
                               </Link>
                             </h2>
                             <p>{item?.content1}</p>
                             <div className="btn-box">
-                              <Link to={`/urunler/${slug}/${item?.slug}`}>
+                              <Link to={`/${productPath}/${slug}/${item?.slug}`}>
                                 Read More{" "}
                                 <span className="icon-plus-sign"></span>
                               </Link>
@@ -77,7 +77,7 @@ const menu = modulPage[0]?.menu;
             {/* Start Sidebar */}
             <div className="col-xl-4 col-lg-5">
               <div className="sidebar sidebar__blog-list">
-                <Category menu={menu} />
+                <CategoryProduct menu={menu} />
               </div>
             </div>
             {/* End Sidebar */}
