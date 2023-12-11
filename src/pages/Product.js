@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 
 import { Link, useParams } from "react-router-dom";
 import HeaderThree from "../common/header/HeaderThree";
-import liftApi from "../data/data";
+
 import FooterOne from "../common/footer/FooterOne";
 import { useIconContext } from "../context/Context";
 
 const Product = () => {
   const { slug } = useParams();
-  const { fetchPageData, page, lang } = useIconContext();
+  const { fetchPageData, page, lang, productPath } = useIconContext();
   useEffect(() => {
     if (lang === "tr") {
       fetchPageData("urunler");
@@ -42,11 +42,13 @@ const Product = () => {
                       <div className="blog-one__single-content">
                         <div className="inner-content">
                           <h2>
-                            <Link to={`/urunler/${e?.slug}`}>{e?.title}</Link>
+                            <Link to={`/${productPath}/${e?.slug}`}>
+                              {e?.title}
+                            </Link>
                           </h2>
                           <div className="btn-box">
                             <Link
-                              to={`/urunler/${e?.slug}`}
+                              to={`/${productPath}/${e?.slug}`}
                               className="thm-btn"
                               data-text={e?.title}
                             >
