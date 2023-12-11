@@ -26,8 +26,6 @@ export function IconProvider({ children }) {
       console.log(error);
     }
   };
-
-
   const fetchData = async () => {
     try {
       const responseMenü = await axios.get(
@@ -38,8 +36,7 @@ export function IconProvider({ children }) {
     } catch (error) {
       console.log(error);
     }
-  };
-  
+  };  
   const fetchLangData = async () => {
     try {
       const responseMenü = await axios.get(
