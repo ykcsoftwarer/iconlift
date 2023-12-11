@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import WOW from "wowjs";
@@ -21,17 +21,16 @@ import ServicesPage from "./pages/Hakkimizda";
 import MetrialManagment from "./pages/Misyonumuz";
 import ContactPage from "./pages/Iletisim";
 
-import Product from "./Kişiler/Fatih/Pagesss/ürünler/Product";
-import ProductDetail from "./Kişiler/Fatih/Pagesss/ürünler/ProductDetail";
+import Product from "./pages/Product";
+import ProductDetail from "./pages/ProductDetail";
 import liftApi from "./data/data";
 import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
 import { useIconContext } from "./context/Context";
 
 function App() {
   const [data, setdata] = useState();
-  const{menü}=useIconContext()
-  
-  
+  const { menü } = useIconContext();
+
   useEffect(() => {
     new WOW.WOW({
       live: false,
@@ -40,49 +39,27 @@ function App() {
   return (
     <Router>
       <ScrollToTopRoute />
-      
-      <Routes>
-        <Route
-          path={`/index`}
-          exact
-          element={<HomeDefault />}
-        />
-        
-        <Route
-          path={`/urunler`}
-          exact
-          element={<Product  />}
-        />
 
-        <Route
-          path={`/urunler/:slug`}
-          exact
-          element={<ProductDetail/>}
-        />
+      <Routes>
+        <Route path={`/index`} exact element={<HomeDefault />} />
+
+        <Route path={`/urunler`} exact element={<Product />} />
+
+        <Route path={`/urunler/:slug`} exact element={<ProductDetail />} />
         <Route
           path={`/urunler/:categorySlug/:slug`}
           exact
-          element={<Details/>}
+          element={<Details />}
         />
 
-        <Route
-          path={`/products`}
-          exact
-          element={<Product  />}
-        />
+        <Route path={`/products`} exact element={<Product />} />
 
-        <Route
-          path={`/products/:slug`}
-          exact
-          element={<ProductDetail/>}
-        />
+        <Route path={`/products/:slug`} exact element={<ProductDetail />} />
         <Route
           path={`/products/:categorySlug/:slug`}
           exact
-          element={<Details/>}
+          element={<Details />}
         />
-
-        
 
         <Route
           path={`/asansor-cesitleri`}
@@ -95,27 +72,11 @@ function App() {
           element={<AsansörDetail />}
         />
 
-        <Route
-          path={`/vizyonumuz`}
-          exact
-          element={<GeneralContracting />}
-        />
-        <Route
-          path={`/misyonmuz`}
-          exact
-          element={<MetrialManagment />}
-        />
-        <Route
-          path={`/hakkimizda`}
-          exact
-          element={<ServicesPage />}
-        />
-        <Route
-          path={`/iletisim`}
-          exact
-          element={<ContactPage />}
-        />
-        {/* <Route path={`/*`} exact element={<Error />} /> */}
+        <Route path={`/vizyonumuz`} exact element={<GeneralContracting />} />
+        <Route path={`/misyonmuz`} exact element={<MetrialManagment />} />
+        <Route path={`/hakkimizda`} exact element={<ServicesPage />} />
+        <Route path={`/iletisim`} exact element={<ContactPage />} />
+        <Route path={`/*`} exact element={<Error />} />
       </Routes>
       <ScrollToTop
         className="scrollUp"
