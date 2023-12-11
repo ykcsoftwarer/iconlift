@@ -14,7 +14,19 @@ export function IconProvider({ children }) {
   const [data, setData] = useState([]);
   const [page, setPage] = useState([]);
   const [langData, setLangData] = useState([]);
+  const [productPath, setproductPath] = useState("urunler")
   
+
+  const productLang= ()=>{
+    if(lang== "tr"){
+      setproductPath("urunler")
+    }else if (lang== "en"){
+      setproductPath("products")
+    }
+  }
+
+
+    // APİ FETCH
   const fetchPageData = async (item="index") => {
     try {
       const responseMenü = await axios.get(
@@ -65,6 +77,7 @@ export function IconProvider({ children }) {
     fetchMenüData()
     fetchData()
     fetchLangData()
+    productLang()
    
   }, [lang]);
   
@@ -76,6 +89,7 @@ export function IconProvider({ children }) {
     setLang,
     fetchPageData,
     page,
+    productPath,
   };
 
   return (

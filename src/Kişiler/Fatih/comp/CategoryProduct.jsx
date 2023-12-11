@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import liftApi from "../../../data/data";
+import { useIconContext } from "../../../context/Context";
 
-const Category = ({menu}) => {
-  const api = liftApi
+
+const CategoryProduct = ({menu}) => {
+  const {productPath } = useIconContext()
 console.log(menu);
   return (
     <div className="services-details__sidebar-single services-details-category">
@@ -17,7 +18,7 @@ console.log(menu);
         
         <li>
           <Link
-            to={`/urunler/${item?.slug}`}
+            to={`/${productPath}/${item?.slug}`}
             className="active"
           >
             {item?.title}
@@ -35,4 +36,4 @@ console.log(menu);
   );
 };
 
-export default Category;
+export default CategoryProduct;
