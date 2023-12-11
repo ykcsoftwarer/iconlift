@@ -12,8 +12,10 @@ const IlUrün = () => {
     useEffect(() => {
         fetchPageData(slug)
     },[lang])
-    console.log(slug);
-    const detailData= page[0]["data"]
+    const modulPage = page?.filter((page) => page?.modulName === "productdetails")
+    const data = modulPage[0]?.data;
+    console.log("detail",data);
+    
     
 
   return (
@@ -24,7 +26,7 @@ const IlUrün = () => {
                             {/* Start Faq One Img */}
                             <div className="col-xl-6">
                                 <div className="faq-one__img wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-                                    <img src={detailData?.image} alt="#" />
+                                    <img src={data?.image} alt="#" />
                                 </div>
                             </div>
                             {/* End Faq One Img */}
@@ -34,12 +36,12 @@ const IlUrün = () => {
                                 <div className="faq-one__accordion">
                                     <div className="sec-title">
                                         <div className="sec-title__tagline">
-                                            <h6>{slug}</h6> <span className="right"></span>
+                                            <h6>{data?.title1}</h6> <span className="right"></span>
                                         </div>
                                         <h2 className="sec-title__title">TEKNİK ÖZELLİKLER</h2>
                                     </div>
                                     <div className="ürün-table">
-                                            <ul >
+                                            {/* <ul >
                                                 <li> 100% Insurance</li>
                                                 <li>Custom Business Rules</li>
                                                 <li>Professional Design</li>
@@ -54,8 +56,8 @@ const IlUrün = () => {
                                                 <li>Design and Build</li>
                                                 <li>10 Year maintenance</li>
                                             </ul>
-                                            <hr/>
-                                         
+                                            <hr/> */}
+                                         {data?.content1}
                                         </div>
                                 </div>
                             </div>
