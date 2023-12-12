@@ -29,7 +29,7 @@ import { useIconContext } from "./context/Context";
 
 function App() {
   
-  const { productPath } = useIconContext();
+  const { productPath ,asansorPath} = useIconContext();
 
   useEffect(() => {
     new WOW.WOW({
@@ -62,12 +62,12 @@ function App() {
         /> */}
 
         <Route
-          path={`/asansor-cesitleri`}
+          path={`/${asansorPath}`}
           exact
           element={<AsansörSistemleri />}
         />
         <Route
-          path={`/asansor-cesitleri/:slug`}
+          path={`/${asansorPath}/:slug`}
           exact
           element={<AsansörDetail />}
         />
