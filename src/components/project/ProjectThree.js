@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Link} from 'react-router-dom';
+import { useIconContext } from '../../context/Context';
 
-export default class ProjectThree extends React.Component {
-    componentDidMount() {
+const ProjectThree = () => {
+
+
+    const { data } = useIconContext();
+    const dataSlider = data[3]?.data
+    
+
+    console.log('açık',dataSlider)
+   useEffect(() => {
 
         const $ = window.$;
         
@@ -64,8 +72,8 @@ export default class ProjectThree extends React.Component {
             });
           }
           
-    }
-    render(){
+    }, []);
+    
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
@@ -79,78 +87,35 @@ export default class ProjectThree extends React.Component {
                             <h2 className="sec-title__title">ÜRÜNLERİMİZ<br /> </h2>
                         </div>
                         <div className="row">
+            
                             <div className="col-xl-12">
                                 <div className="project-three__carousel owl-carousel owl-theme">
-                                    {/* Start Project Three Single */}
-                                    <div className="project-three__single">
+                                {dataSlider?.map((k, index) => {
+            
+            return (   
+             
+                                    <div key={index} className="project-three__single">
                                         <div className="project-three__single-img">
-                                            <img src={publicUrl+"assets/images/iconLift/productsPicture/kapı.jpg"} alt="#" 
-                                            style={{height:"617.656px"}}
+                                            <img src={k.image} alt="#" 
+                                            // style={{height:"617.656px"}}
                                             />
                                             <div className="icon-box">
-                                                <a className="img-popup" href={publicUrl+"assets/images/iconLift/productsPicture/kapı.jpg"}><span
+                                                <a className="img-popup" href={k.image}><span
                                                         className="icon-plus-sign"></span></a>
                                             </div>
                                             <div className="content-box">
                                                 {/* <p>KAPILAR</p> */}
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>KAPILAR</Link></h3>
+                                                <h3>
+                                                    <Link to={process.env.PUBLIC_URL + `/portfolio-details`}>
+                                                        {k.title}
+                                                        </Link></h3>
                                             </div>
                                         </div>
                                     </div>
-                                    {/* End Project Three Single */}
-
-                                    {/* Start Project Three Single */}
-                                    <div className="project-three__single">
-                                        <div className="project-three__single-img">
-                                            <img src={publicUrl+"assets/images/iconLift/productsPicture/kabin.jpg"} alt="#" />
-                                            <div className="icon-box">
-                                                <a className="img-popup" href={publicUrl+"assets/images/iconLift/productsPicture/kabin.jpg"}><span
-                                                        className="icon-plus-sign"></span></a>
-                                            </div>
-                                            <div className="content-box">
-                                                {/* <p>KABİNLER</p> */}
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>KABİNLER</Link></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {/* End Project Three Single */}
-
-                                    {/* Start Project Three Single */}
-                                    <div className="project-three__single">
-                                        <div className="project-three__single-img">
-                                            <img src={publicUrl+"assets/images/iconLift/productsPicture/kaplama.jpg"} alt="#" />
-                                            <div className="icon-box">
-                                                <a className="img-popup" href={publicUrl+"assets/images/iconLift/productsPicture/kaplama.jpg"}><span
-                                                        className="icon-plus-sign"></span></a>
-                                            </div>
-                                            <div className="content-box">
-                                                {/* <p>Kabin Kaplama</p> */}
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>Kabin Kaplama</Link></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {/* End Project Three Single */}
-
-                                    {/* Start Project Three Single */}
-                                    <div className="project-three__single">
-                                        <div className="project-three__single-img">
-                                            <img src={publicUrl+"assets/images/iconLift/productsPicture/halat.jpg"} alt="#"
-                                            style={{height:"617.656px"}}
-                                            />
-                                            <div className="icon-box">
-                                                <a className="img-popup" href={publicUrl+"assets/images/iconLift/productsPicture/halat.jpg"}
-                                                
-                                                >
-                                                    <span className="icon-plus-sign"></span>
-                                                </a>
-                                            </div>
-                                            <div className="content-box">
-                                                {/* <h3>Halat</h3> */}
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>Halat</Link></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {/* End Project Three Single */}
+                                 
+                                 );
+                                })}
+                                   
                                 </div>
                             </div>
 
@@ -168,4 +133,4 @@ export default class ProjectThree extends React.Component {
             </>
         )
     }
-}
+    export default ProjectThree;
