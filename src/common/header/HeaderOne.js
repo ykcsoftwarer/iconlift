@@ -14,7 +14,8 @@ const HeaderOne = () => {
   const data = translations?.data;
   const siteData = about?.data;
   const logo= siteData?.logo01
-  console.log("trans", about);
+  const socialMedia= siteData?.socialMedia
+  console.log("trans", siteData?.whatsapp);
   return (
     <>
       <header className="main-header main-header-three clearfix">
@@ -33,22 +34,22 @@ const HeaderOne = () => {
 
                   <ul className="social-links">
                     <li>
-                      <a href="https://facebook.com">
+                      <a href={socialMedia?.facebook}>
                         <span className="icon-facebook-app-symbol"></span>
                       </a>
                     </li>
                     <li>
-                      <a href="https://twitter.com">
-                        <span className="icon-twitter"></span>
+                      <a href={`https://wa.me/${siteData?.whatsapp}`}>
+                        <span className="fa fa-whatsapp"></span>
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a href="https://google.com">
                         <span className="icon-google-plus-logo"></span>
                       </a>
-                    </li>
+                    </li> */}
                     <li>
-                      <a href="https://linkedin.com">
+                      <a href={socialMedia?.instagram}>
                         <span className="icon-linkedin"></span>
                       </a>
                     </li>

@@ -37,6 +37,9 @@
 .icon-pin:before {
   content: "\e900";
 }
+.fa-whatsapp:before {
+  content: "\e900";
+}
 
 .icon-email:before {
   content: "\e901";
