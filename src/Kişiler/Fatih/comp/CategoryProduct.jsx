@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useIconContext } from "../../../context/Context";
 
 
 const CategoryProduct = ({menu}) => {
   const {productPath } = useIconContext()
+  const location = useLocation();
 console.log(menu);
   return (
     <div className="services-details__sidebar-single services-details-category">
@@ -19,7 +20,7 @@ console.log(menu);
         <li>
           <Link
             to={`/${productPath}/${item?.slug}`}
-            className="active"
+            className={location.pathname === `/${productPath}/${item?.slug}` ? "active" : ""}
           >
             {item?.title}
             <span className="icon-right-arrow"></span>
