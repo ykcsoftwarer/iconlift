@@ -14,7 +14,27 @@ export function IconProvider({ children }) {
   const [data, setData] = useState([]);
   const [page, setPage] = useState([]);
   const [langData, setLangData] = useState([]);
+  const [productPath, setproductPath] = useState("urunler")
+  const [asansorPath, setasansorPath] = useState("asansor-cesitleri")
   
+
+  const productLang= ()=>{
+    if(lang== "tr"){
+      setproductPath("urunler")
+    }else if (lang== "en"){
+      setproductPath("products")
+    }
+  }
+  const asansorLang= ()=>{
+    if(lang== "tr"){
+      setasansorPath("asansor-cesitleri")
+    }else if (lang== "en"){
+      setasansorPath("products")
+    }
+  }
+
+
+    // APİ FETCH
   const fetchPageData = async (item="index") => {
     try {
       const responseMenü = await axios.get(
@@ -26,8 +46,6 @@ export function IconProvider({ children }) {
       console.log(error);
     }
   };
-
-
   const fetchData = async () => {
     try {
       const responseMenü = await axios.get(
@@ -38,8 +56,7 @@ export function IconProvider({ children }) {
     } catch (error) {
       console.log(error);
     }
-  };
-  
+  };  
   const fetchLangData = async () => {
     try {
       const responseMenü = await axios.get(
@@ -68,6 +85,8 @@ export function IconProvider({ children }) {
     fetchMenüData()
     fetchData()
     fetchLangData()
+    productLang()
+    asansorLang()
    
   }, [lang]);
   
@@ -79,6 +98,8 @@ export function IconProvider({ children }) {
     setLang,
     fetchPageData,
     page,
+    productPath,
+    asansorPath,
   };
 
   return (

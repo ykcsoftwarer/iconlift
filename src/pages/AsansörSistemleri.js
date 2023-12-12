@@ -14,7 +14,7 @@ const AsansörSistemleri = () => {
                 currentPage="Asansör Çeşitleri" 
             />
             <AsansorOne />
-            <BrandOne />
+            {/* <BrandOne /> */}
             <FooterOne />
     </>
   )
