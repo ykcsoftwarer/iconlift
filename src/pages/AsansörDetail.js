@@ -5,14 +5,16 @@ import Breadcrumb from "../common/breadcrumb/Breadcrumb";
 import FooterOne from '../common/footer/FooterOne';
 import BrandOne from '../components/brand/BrandOne';
 import SingleAsansörContracting from '../Kişiler/Hümeyra/asansor/SingleAsansörContracting';
+import { useParams } from 'react-router-dom';
 
 const AsansörDetail = () => {
+  const { categorySlug,slug} = useParams();
   return (
     <>
     <HeaderThree />
     <Breadcrumb
-        heading="makine dairesiz  asansör"
-        currentPage="Makine Dairesiz Asansör" 
+        heading={slug}
+        currentPage={categorySlug}
     />
     <SingleAsansörContracting />
     <BrandOne />

@@ -15,6 +15,7 @@ export function IconProvider({ children }) {
   const [page, setPage] = useState([]);
   const [langData, setLangData] = useState([]);
   const [productPath, setproductPath] = useState("urunler")
+  const [asansorPath, setasansorPath] = useState("asansor-cesitleri")
   
 
   const productLang= ()=>{
@@ -22,6 +23,13 @@ export function IconProvider({ children }) {
       setproductPath("urunler")
     }else if (lang== "en"){
       setproductPath("products")
+    }
+  }
+  const asansorLang= ()=>{
+    if(lang== "tr"){
+      setasansorPath("asansor-cesitleri")
+    }else if (lang== "en"){
+      setasansorPath("products")
     }
   }
 
@@ -78,6 +86,7 @@ export function IconProvider({ children }) {
     fetchData()
     fetchLangData()
     productLang()
+    asansorLang()
    
   }, [lang]);
   
@@ -90,6 +99,7 @@ export function IconProvider({ children }) {
     fetchPageData,
     page,
     productPath,
+    asansorPath,
   };
 
   return (
