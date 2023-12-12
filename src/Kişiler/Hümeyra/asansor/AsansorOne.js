@@ -5,7 +5,7 @@ import { useIconContext } from '../../../context/Context';
 const AsansorOne =() => {
 
     const {slug}= useParams()
-    const {fetchPageData , page ,lang , productPath}= useIconContext()
+    const {fetchPageData , page ,lang , asansorPath}= useIconContext()
     useEffect(() => {
         if(lang === "tr"){
   
@@ -54,7 +54,7 @@ const AsansorOne =() => {
                     <div className="services-one__single-content-title">
                       <h2>
                         <Link
-                          to={`/${productPath}/${item?.slug}`}>
+                          to={`/${asansorPath}/${item?.slug}`}>
                         
                           {item.title}
                         </Link>
@@ -66,7 +66,7 @@ const AsansorOne =() => {
                       </p>
                       <div className="services-one__single-btn">
                         <Link
-                          to={`/${productPath}/${item?.slug}`}
+                          to={`/${asansorPath}/${item?.slug}`}
                           className="thm-btn"
                           data-text={item?.title}
                         >

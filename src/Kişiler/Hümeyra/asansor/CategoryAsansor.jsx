@@ -4,7 +4,7 @@ import { useIconContext } from "../../../context/Context";
 
 
 const CategoryAsansor = ({menu}) => {
-  const {productPath } = useIconContext()
+  const {asansorPath } = useIconContext()
 console.log(menu);
   return (
     <div className="services-details__sidebar-single services-details-category">
@@ -18,7 +18,7 @@ console.log(menu);
         
         <li>
           <Link
-            to={`/${productPath}/${item?.slug}`}
+            to={`/${asansorPath}/${item?.slug}`}
             className="active"
           >
             {item?.title}
