@@ -66,7 +66,7 @@ const FooterOne =()=> {
 
                                             <div className="col-xl-2 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s">
                                                 <div className="footer-widget__column footer-widget__services">
-                                                    {/* <h2 className="footer-widget__title">{footerData["footer1"]}</h2> */}
+                                                       
                                                     <ul className="footer-widget__services-list">
                                                         <li className="footer-widget__services-list-item"><Link to="/about-one">About Company</Link></li>
                                                         <li className="footer-widget__services-list-item"><Link to="/services">Company Services</Link></li>
