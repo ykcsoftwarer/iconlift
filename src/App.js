@@ -22,9 +22,9 @@ import MetrialManagment from "./pages/Misyonumuz";
 import ContactPage from "./pages/Iletisim";
 
 import Product from "./pages/Product";
-import ProductDetail from "./pages/ProductDetail";
+// import ProductDetail from "./pages/ProductDetail";
 
-import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
+// import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
 import { useIconContext } from "./context/Context";
 
 function App() {
@@ -45,11 +45,11 @@ function App() {
 
         <Route path={`/${productPath}`} exact element={<Product />} />
 
-        <Route path={`/${productPath}/:slug`} exact element={<ProductDetail />} />
+        {/* <Route path={`/${productPath}/:slug`} exact element={<ProductDetail />} /> */}
         <Route
           path={`/${productPath}/:categorySlug/:slug`}
           exact
-          element={<Details />}
+          // element={<Details />}
         />
 
         {/* <Route path={`/products`} exact element={<Product />} />
