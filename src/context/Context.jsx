@@ -17,6 +17,7 @@ export function IconProvider({ children }) {
   const [asansorPath, setasansorPath] = useState("asansor-cesitleri");
   const [translations, setTranslations] = useState();
   const [about, setAbout] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   const productLang = () => {
     if (lang == "tr") {
@@ -108,6 +109,9 @@ export function IconProvider({ children }) {
     asansorLang();
     fetchTranslationData();
     fetchAboutData();
+    setTimeout(() => {
+      setIsLoading(false);
+    },2000);
   }, [lang]);
 
   const contextValue = {
@@ -120,6 +124,7 @@ export function IconProvider({ children }) {
     asansorPath,
     translations,
     about,
+    isLoading,
 
     setLang,
     fetchPageData,
