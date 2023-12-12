@@ -29,7 +29,7 @@ export function IconProvider({ children }) {
     if(lang== "tr"){
       setasansorPath("asansor-cesitleri")
     }else if (lang== "en"){
-      setasansorPath("products")
+      setasansorPath("elevator-types")
     }
   }
 

@@ -11,7 +11,7 @@ const AsansorOne =() => {
   
             fetchPageData ("asansor-cesitleri")
         }else if(lang === "en"){
-            fetchPageData ("asansor-cesitleri")
+            fetchPageData ("elevator-types")
         }
     },[lang,slug])
 
@@ -33,7 +33,7 @@ const AsansorOne =() => {
             {/* <span className="left"></span>
                   <h6>Our Services</h6> <span className="right"></span> */}
           </div>
-          <h2 className="sec-title__title">Asansör Çeşitleri</h2>
+          <h2 className="sec-title__title">{slug}</h2>
         </div>
 
         <div className="row">
