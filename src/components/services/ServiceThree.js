@@ -1,8 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { useIconContext } from '../../context/Context';
 
-export default class ServiceThree extends React.Component {
-    render(){
+const ServiceThree = () => {
+    const { data } = useIconContext();
+    const categoriesData = data?.find((k)=> k.modulName === "categories")?.data
+    
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
@@ -26,141 +29,35 @@ export default class ServiceThree extends React.Component {
                         </div>
 
                         <div className="row">
-                            {/* Start Services One Single */}
-                            <div className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="services-three__single">
-                                    <div className="services-three__single__bg"
-                                     style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/yolcu.jpg)'}}
-                                    ></div>
-                                    <div className="services-three__single-icon">
-                                        <span className="icon-crane"></span>
-                                    </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Yolcu Asansörü</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
-                                    <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}>
-                                            <span className="icon-right-arrow"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Services One Single */}
+{categoriesData?.map((k,index)=>{
+return (
+    <div className="col-xl-3 col-lg-6 col-md-6">
+    <div className="services-three__single">
+        <div className="services-three__single__bg"
+         style={{backgroundImage: `url(${k.image})`}}
+        ></div>
+        <div className="services-three__single-icon">
+            <span className="icon-crane"></span>
+        </div>
+        <h3 className=''><Link to={process.env.PUBLIC_URL + `/general-contracting`}>{k.title}</Link></h3>
+        <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
+        <div className="btn-box">
+            <Link to={process.env.PUBLIC_URL + `/{general-contracting}`}>
+                <span className="icon-right-arrow"></span></Link>
+        </div>
+    </div>
+</div>
+)
 
-                            {/* Start Services One Single */}
-                            <div className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="services-three__single">
-                                    <div className="services-three__single__bg" 
-                                    style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/yükAsansörü.jpg)'}}>
-
-                                    </div>
-                                    <div className="services-three__single-icon">
-                                        <span className="icon-interior-design-1"></span>
-                                    </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Yük Asansörü</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
-                                    <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Services One Single */}
-
-                            {/* Start Services One Single */}
-                            <div className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/hidrolikAsansör.jpg)'}}></div>
-                                    <div className="services-three__single-icon">
-                                        <span className="icon-surgery"></span>
-                                    </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Hidrolik Asansör</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
-                                    <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Services One Single */}
+})}
+                           
+                         
 
                           
-
-                            {/* Start Services One Single */}
-                            <div className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/lüksAsansör.jpg)'}}></div>
-                                    <div className="services-three__single-icon">
-                                        <span className="icon-painting"></span>
-                                    </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Lüks Asansörler</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
-                                    <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Services One Single */}
-                            {/* Start Services One Single */}
-                            <div className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/yapayzeka.jpg)'}}></div>
-                                    <div className="services-three__single-icon">
-                                        <span className="icon-painting"></span>
-                                    </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Akıllı Yapay Zekalı Asansörler</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
-                                    <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Services One Single */}
-                              {/* Start Services One Single */}
-                              <div className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/makineDaireli2.jpg)'}}></div>
-                                    <div className="services-three__single-icon">
-                                        <span className="icon-painting"></span>
-                                    </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Makine Daireli Asansör</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
-                                    <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Services One Single */}
-                            {/* Start Services One Single */}
-                            <div className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/makineDairesiz5.jpg)'}}></div>
-                                    <div className="services-three__single-icon">
-                                        <span className="icon-painting"></span>
-                                    </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Makine Dairesiz Asansör</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
-                                    <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Services One Single */}
-                            {/* Start Services One Single */}
-                            <div className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="services-three__single">
-                                    <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/asansörler/diğerAsansör.jpg)'}}></div>
-                                    <div className="services-three__single-icon">
-                                        <span className="icon-painting"></span>
-                                    </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Diğer Asansör Çeşitleri</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
-                                    <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* End Services One Single */}
                         </div>
                     </div>
                 </section>
             </>
         )
     }
-}
+    export default ServiceThree;
