@@ -12077,7 +12077,7 @@ Faq One Faq
 .loader-page {
     
   text-transform: uppercase;
-  color: #f32121;
+  color:var(--thm-base);
   font-size: 40px;
   font-family: arial;
   position: fixed;
