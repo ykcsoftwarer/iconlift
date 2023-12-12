@@ -9374,6 +9374,8 @@ a.sc-hLBbgP {
     margin-bottom: 30px;
     padding: 40px 40px 40px;
     z-index: 1;
+   
+   
 }
 
 .services-three__single__bg {
@@ -9450,6 +9452,13 @@ a.sc-hLBbgP {
     font-weight: 600;
     text-transform: capitalize;
     margin-bottom: 12px;
+
+    /* //kubra// */
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+   /* //kubra// */
+
 }
 
 .services-three__single h3 a {
