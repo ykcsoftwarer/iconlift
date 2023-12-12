@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Link} from 'react-router-dom';
+import { useIconContext } from '../../context/Context';
 
-export default class AboutFour extends React.Component {
-    componentDidMount() {
+const AnasayfaVideo = () => {
+
+
+    const { data } = useIconContext();
+    const Module1Data = data?.find((k)=> k.modulName === "module1")?.data
+    
+    // const Module1Data = data[2]?.data
+
+console.log('module1',Module1Data)
+  
+   useEffect(() => {
 
         const $ = window.$;
         
@@ -17,20 +27,20 @@ export default class AboutFour extends React.Component {
             });
         }
           
-    }
-    render(){
+    }, []);
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
+
                 <div className="about-three">
                     <div className="container">
                         <div className="row">
                             <div className="col-xl-6">
                                 <div className="about-three__img">
                                     <div className="inner">
-                                        <img src={publicUrl+"assets/images/update1.0/about-v3-img1.jpg"} alt="#" />
+                                        <img src={Module1Data?.image} alt="#" />
                                         <div className="about-three__img-video wow zoomIn" data-wow-delay="100ms">
-                                            <a href="https://www.youtube.com/watch?v=0O2aH4XLbto" className="video-popup">
+                                            <a href={Module1Data?.url} className="video-popup">
                                                 <div className="about-three__img-video-icon">
                                                     <span className="fa fa-play"></span>
                                                     <i className="ripple"></i>
@@ -45,16 +55,16 @@ export default class AboutFour extends React.Component {
                                 <div className="about-three__content">
                                     <div className="sec-title">
                                         <div className="sec-title__tagline">
-                                            <h6> GÜVENLİK, KALİTE VE UYGUN FİYAT
+                                            <h6> {Module1Data?.title1}
  </h6> 
                                         </div>
-                                        <h2 className="sec-title__title">TASARIMA YENİ BİR BOYUT KAZANDIRDIK
+                                        <h2 className="sec-title__title">{Module1Data?.title2}
 </h2>
                                     </div>
 
                                     <div className="about-three__content-inner">
                                         <div className="text1">
-                                            <p>Firmamız elektrikli ve hidrolik asansör tasarımı, montajı, modernizasyonu, bakımı, servis hizmetleri, son kontrolleri ve test edilmesi konularında faaliyet göstermektedir.</p>
+                                            <p>{Module1Data?.content1}</p>
                                         </div>
                                         <div className="text2">
                                             <h4>İconlift Asansör Seçmenin Faydaları </h4>
@@ -112,7 +122,8 @@ Kaliteden taviz vermeyen</p>
                         </div>
                     </div>
                 </div>
+       
             </>
         )
     }
-}
+    export default AnasayfaVideo;
