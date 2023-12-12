@@ -1,45 +1,56 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useEffect } from 'react';
+import {Link, useParams} from 'react-router-dom';
+import { useIconContext } from '../../../context/Context';
 
 
 
-export default class SingleAsansörContracting extends React.Component {
-    componentDidMount() {
+const SingleAsansörContracting = () => {
+    useEffect(() => {
+      const $ = window.$;
+  
+      if ($(".tabs-box").length) {
+        $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
+          e.preventDefault();
+          var target = $($(this).attr("data-tab"));
+  
+          if ($(target).is(":visible")) {
+            return false;
+          } else {
+            target
+              .parents(".tabs-box")
+              .find(".tab-buttons")
+              .find(".tab-btn")
+              .removeClass("active-btn");
+            $(this).addClass("active-btn");
+            target
+              .parents(".tabs-box")
+              .find(".tabs-content")
+              .find(".tab")
+              .fadeOut(0);
+            target
+              .parents(".tabs-box")
+              .find(".tabs-content")
+              .find(".tab")
+              .removeClass("active-tab");
+            $(target).fadeIn(300);
+            $(target).addClass("active-tab");
+          }
+        });
+      }
+    }, []);
 
-        const $ = window.$;
+    const {slug}= useParams()
+    const {fetchPageData, page ,lang}= useIconContext()
+    useEffect(() => {
         
-        if ($(".tabs-box").length) {
-            $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
-              e.preventDefault();
-              var target = $($(this).attr("data-tab"));
-        
-              if ($(target).is(":visible")) {
-                return false;
-              } else {
-                target
-                  .parents(".tabs-box")
-                  .find(".tab-buttons")
-                  .find(".tab-btn")
-                  .removeClass("active-btn");
-                $(this).addClass("active-btn");
-                target
-                  .parents(".tabs-box")
-                  .find(".tabs-content")
-                  .find(".tab")
-                  .fadeOut(0);
-                target
-                  .parents(".tabs-box")
-                  .find(".tabs-content")
-                  .find(".tab")
-                  .removeClass("active-tab");
-                $(target).fadeIn(300);
-                $(target).addClass("active-tab");
-              }
-            });
-        }
-          
-    }
-    render(){
+            fetchPageData(slug)
+    
+    },[lang,slug])
+
+    const modulPage = page?.filter((page) => page?.modulName === "categoriesmenu");
+    const pageData= modulPage.map((page) => page?.data );
+    
+    console.log("product",pageData);
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
@@ -54,7 +65,10 @@ export default class SingleAsansörContracting extends React.Component {
                                     </div>
                                     <div className="services-details__text-box1">
                                         <div className="title">
-                                            <h2>Makine Dairesiz Asansörler</h2>
+                                            <h2>Makine Dairesiz Asansörler
+                                           
+
+                                            </h2>
                                         </div>
                                         <p className="text-1">Makine dairesi olan yapıların çoğu zaman bina estetiğine ve görüntüsüne olumsuz etkisi gözlemlenmektedir. </p>
 
@@ -70,95 +84,7 @@ export default class SingleAsansörContracting extends React.Component {
                                         
                                     </div>
 
-                                    {/* <div className="services-details__text-box2 bg-primary">
-                                        <div className="row bg-primary">
-                                            <div className="col-xl-5">
-                                                <div className="services-details__text-box2-img">
-                                                    <img src={publicUrl+"assets/images/services/services-details-img2.jpg"} alt="" />
-                                                </div>
-                                            </div>
-
-                                            <div className="col-xl-7">
-                                                <div className="services-details__text-box2-content">
-                                                    <div className="title">
-                                                        <h2>Planning Work</h2>
-                                                    </div>
-                                                    <div className="text">
-                                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                                            dolore eu fugiat </p>
-                                                    </div>
-                                                    <ul>
-                                                        <li>
-                                                            <div className="icon">
-                                                                <span className="icon-tick"></span>
-                                                            </div>
-
-                                                            <div className="text">
-                                                                <p>Ut enim ad minim veniam</p>
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div className="icon">
-                                                                <span className="icon-tick"></span>
-                                                            </div>
-
-                                                            <div className="text">
-                                                                <p> voluptate velit esse cillum dolore eu </p>
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div className="icon">
-                                                                <span className="icon-tick"></span>
-                                                            </div>
-
-                                                            <div className="text">
-                                                                <p>Kuis nostrud exercitation ullamco </p>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> */}
-
-                                    {/* <div className="services-details__text-box3 bg-primary">
-                                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit quia
-                                            consequuntur magni dolores eos qui ratione volsnesciunt.Neque porro quisquam est,
-                                            qui dolorem ipsum quia dolor sit amet, consectetur, sed quia non numquam eius modi
-                                            tempora incidunt ut labore et dolore </p>
-
-                                        <ul>
-                                            <li>
-                                                <div className="icon">
-                                                    <span className="icon-tick"></span>
-                                                </div>
-
-                                                <div className="text">
-                                                    <p>Nostrud exercitation ullamco laboris consequat.reprehenderit in voluptate
-                                                    </p>
-                                                </div>
-                                            </li>
-
-                                            <li>
-                                                <div className="icon">
-                                                    <span className="icon-tick"></span>
-                                                </div>
-
-                                                <div className="text">
-                                                    <p>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                                        occaecat
-                                                    </p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div> */}
-
-
-                                    {/* Start Services Details Tab Box */}
-                                 
-                                    {/* End Services Details Tab Box */}
+                       
                                 </div>
                             </div>
                             {/* End Services Details Content */}
@@ -196,7 +122,8 @@ export default class SingleAsansörContracting extends React.Component {
                         </div>
                     </div>
                 </section>
-            </>
-        )
-    }
-}
+                </>
+  );
+};
+
+export default SingleAsansörContracting;
