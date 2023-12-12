@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import { useIconContext } from '../../context/Context';
 
 const ProjectThree = () => {
 
-
-    const { data } = useIconContext();
+  const { slug } = useParams();
+    const { data ,productPath} = useIconContext();
     const dataSlider = data[3]?.data
     
 
@@ -72,7 +72,7 @@ const ProjectThree = () => {
             });
           }
           
-    }, []);
+    }, [slug]);
     
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
@@ -106,7 +106,7 @@ const ProjectThree = () => {
                                             <div className="content-box">
                                                 {/* <p>KAPILAR</p> */}
                                                 <h3>
-                                                    <Link to={process.env.PUBLIC_URL + `/portfolio-details`}>
+                                                <Link to={`/${productPath}/${k?.slug}`}>
                                                         {k.title}
                                                         </Link></h3>
                                             </div>
