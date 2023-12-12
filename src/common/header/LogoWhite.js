@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default class LogoWhite extends React.Component {
-  render() {
-    let publicUrl = process.env.PUBLIC_URL + "/";
+const LogoWhite=({logo})=> {
+  
     return (
       <>
         <div className="logo">
-          <Link to={process.env.PUBLIC_URL + `/`}>
+          <Link to={`/index`}>
             <img
-              src={publicUrl + "assets/images/logo/iconlift_logo4.jpg"}
+              src={logo}
               alt="Logo"
             />{" "}
           </Link>
@@ -17,4 +16,4 @@ export default class LogoWhite extends React.Component {
       </>
     );
   }
-}
+export default  LogoWhite;

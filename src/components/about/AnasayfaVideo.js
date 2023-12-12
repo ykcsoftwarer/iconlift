@@ -10,7 +10,7 @@ const AnasayfaVideo = () => {
     
     // const Module1Data = data[2]?.data
 
-console.log('module1',Module1Data)
+
   
    useEffect(() => {
 

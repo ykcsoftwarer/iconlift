@@ -4,12 +4,16 @@ import LogoWhite from "./LogoWhite";
 
 import MobileMenu from "./MobileMenu";
 import OffCanvasStyleOne from "./OffCanvasStyleOne";
-import SearchButton from "./SearchButton";
-import LogoBox from "./LogoBox";
 import Nav from "./Nav";
 import NiceSelect from "./NiceSelect";
+import { useIconContext } from "../../context/Context";
 
 const HeaderThree = () => {
+  const { translations, about } = useIconContext();
+  const data = translations?.data;
+  const siteData = about?.data;
+  const logo = siteData?.logo02;
+  console.log("trans", about);
   return (
     <>
       <header className="main-header main-header-one clearfix">
@@ -18,7 +22,7 @@ const HeaderThree = () => {
             <div className="container-fluid">
               <div className="main-header-one__top-inner">
                 <div className="main-header-one__left">
-                  <LogoWhite />
+                  <LogoWhite logo={logo} />
                 </div>
 
                 <div className="main-header-one__middle">
@@ -32,10 +36,8 @@ const HeaderThree = () => {
                       </div>
 
                       <div className="text">
-                        <span>Konumumuz</span>
-                        <p>
-                          Fevziçakmak mh. 10762 sk. B-Blok No: 8 B Karatay/Konya
-                        </p>
+                        <span>{data?.header3}</span>
+                        <p>{siteData?.adress01}</p>
                       </div>
                     </li>
 
@@ -45,10 +47,10 @@ const HeaderThree = () => {
                       </div>
 
                       <div className="text">
-                        <span>Çevrimiçi Destek</span>
+                        <span>{data?.header2}</span>
                         <p className="email">
-                          <a href="mailto:info@iconlift.com">
-                            info@iconlift.com
+                          <a href={`mailto:${siteData?.email}`}>
+                            {siteData?.email}
                           </a>
                         </p>
                       </div>
@@ -60,9 +62,9 @@ const HeaderThree = () => {
                       </div>
 
                       <div className="text">
-                        <span>İletisim</span>
+                        <span>{data?.header1}</span>
                         <p className="number">
-                          <a href="tel:03325028282">0332 502 82 82</a>
+                          <a href={siteData?.phone02}>{siteData?.phone02}</a>
                         </p>
                       </div>
                     </li>
@@ -84,7 +86,7 @@ const HeaderThree = () => {
                     <div className="main-menu__inner">
                       <MobileMenu />
                       <div className="stricky-one-logo">
-                        <LogoWhite />
+                        <LogoWhite  logo={logo}/>
                       </div>
                       <Nav />
 
