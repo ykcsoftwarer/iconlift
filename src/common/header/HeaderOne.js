@@ -43,11 +43,7 @@ const HeaderOne = () => {
                         <span className="fa fa-whatsapp"></span>
                       </a>
                     </li>
-                    {/* <li>
-                      <a href="https://google.com">
-                        <span className="icon-google-plus-logo"></span>
-                      </a>
-                    </li> */}
+                  
                     <li>
                       <a href={socialMedia?.instagram}>
                         <span className="icon-linkedin"></span>
