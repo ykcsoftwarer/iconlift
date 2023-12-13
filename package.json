@@ -2,7 +2,7 @@
   "name": "iconlift",
   "version": "0.1.0",
   "homepage": "index",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
