@@ -27,9 +27,11 @@ import ProductDetail from "./pages/ProductDetail";
 import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
 import { useIconContext } from "./context/Context";
 import { CircleLoader } from "react-spinners";
+import SparePart from "./pages/SparePart";
+import SpareDetail from "./pages/SpareDetail";
 
 function App() {
-  const { productPath, asansorPath, isLoading } = useIconContext();
+  const { productPath, asansorPath, isLoading,sparePath } = useIconContext();
   const containerStyle = {
     background:
       "linear-gradient(90deg, rgba(19,24,89,0.9416141456582633) 19%, rgba(113,0,0,0.9360119047619048) 48%, rgba(5,33,147,0.8827906162464986) 83%)",
@@ -95,7 +97,16 @@ function App() {
               exact
               element={<AsansörDetail />}
             />
-
+             <Route
+              path={`/${sparePath}`}
+              exact
+              element={<SparePart />}
+            />
+ <Route
+              path={`/${sparePath}/:slug`}
+              exact
+              element={<SpareDetail />}
+            />
             <Route
               path={`/vizyonumuz`}
               exact
