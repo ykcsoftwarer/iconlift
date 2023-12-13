@@ -16,6 +16,7 @@
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
     "react-scroll-to-top": "^3.0.0",
+    "react-spinners": "^0.13.8",
     "react-wow": "^1.0.0",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.5",

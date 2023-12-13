@@ -40,7 +40,9 @@ const menu = modulPage[0]?.menu;
                       key={index}
                     >
                       <div className="row">
-                        <div className="col-xl-5">
+                        
+                        <div className="col-xl-5" style={{ boxShadow: 'rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset' }}>
+
                           <div className="blog-list__single-img">
                             <img src={item?.image} alt="#" />
                           </div>
