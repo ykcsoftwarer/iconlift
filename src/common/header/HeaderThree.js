@@ -72,7 +72,7 @@ const HeaderThree = () => {
                 </div>
 
                 <div className="main-header-one__right">
-                  <OffCanvasStyleOne />
+                  {/* <OffCanvasStyleOne /> */}
                 </div>
               </div>
             </div>
