@@ -13,8 +13,7 @@ const AsansörDetail = () => {
     <>
     <HeaderThree />
     <Breadcrumb
-        heading={slug}
-        currentPage={categorySlug}
+        heading={slug} currentPage={categorySlug}
     />
     <SingleAsansörContracting />
     <BrandOne />

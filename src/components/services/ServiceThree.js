@@ -1,11 +1,19 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useEffect } from 'react';
+import {Link, useParams} from 'react-router-dom';
 import { useIconContext } from '../../context/Context';
 
 const ServiceThree = () => {
-    const { data } = useIconContext();
+    const {slug}= useParams()
+    const {fetchPageData , data ,asansorPath,lang  } = useIconContext();
     const categoriesData = data?.find((k)=> k.modulName === "categories")?.data
-    
+    useEffect(() => {
+        if(lang === "tr"){
+  
+            fetchPageData ("asansor-cesitleri")
+        }else if(lang === "en"){
+            fetchPageData ("asansor-cesitleri")
+        }
+    },[lang,slug])
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
@@ -39,10 +47,13 @@ return (
         <div className="services-three__single-icon">
             <span className="icon-crane"></span>
         </div>
-        <h3 className=''><Link to={process.env.PUBLIC_URL + `/general-contracting`}>{k.title}</Link></h3>
+        <h3 className=''>
+            <Link 
+           to={`/${asansorPath}/${k?.slug}`}>{k.title}</Link></h3>
         <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
         <div className="btn-box">
-            <Link to={process.env.PUBLIC_URL + `/{general-contracting}`}>
+            <Link 
+            to={`/${asansorPath}/${k?.slug}`}>
                 <span className="icon-right-arrow"></span></Link>
         </div>
     </div>
