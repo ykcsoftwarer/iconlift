@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import WOW from "wowjs";
@@ -26,16 +26,12 @@ import ProductDetail from "./pages/ProductDetail";
 
 import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
 import { useIconContext } from "./context/Context";
-import { CircleLoader } from "react-spinners";
+
 import SparePart from "./pages/SparePart";
 import SpareDetail from "./pages/SpareDetail";
 
 function App() {
   const { productPath, asansorPath, isLoading,sparePath } = useIconContext();
-  const containerStyle = {
-    background:
-      "linear-gradient(90deg, rgba(19,24,89,0.9416141456582633) 19%, rgba(113,0,0,0.9360119047619048) 48%, rgba(5,33,147,0.8827906162464986) 83%)",
-  };
   useEffect(() => {
     new WOW.WOW({
       live: false,
@@ -77,16 +73,7 @@ function App() {
               exact
               element={<Details />}
             />
-
-            {/* <Route path={`/products`} exact element={<Product />} />
-
-        <Route path={`/products/:slug`} exact element={<ProductDetail />} />
-        <Route
-          path={`/products/:categorySlug/:slug`}
-          exact
-          element={<Details />}
-        /> */}
-
+           
             <Route
               path={`/${asansorPath}`}
               exact

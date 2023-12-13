@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import LogoWhite from "./LogoWhite";
+// import { Link } from "react-router-dom";
 
+// import OffCanvasStyleOne from "./OffCanvasStyleOne";
+import LogoWhite from "./LogoWhite";
 import MobileMenu from "./MobileMenu";
-import OffCanvasStyleOne from "./OffCanvasStyleOne";
 import Nav from "./Nav";
 import NiceSelect from "./NiceSelect";
 import { useIconContext } from "../../context/Context";
