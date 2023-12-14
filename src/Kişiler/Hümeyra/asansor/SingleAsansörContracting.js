@@ -55,6 +55,7 @@ const SingleAsansörContracting = () => {
     const modulPages = page?.filter((page) => page?.modulName === "productdetailsmenu")
     console.log("veee",modulPages)
     const data = modulPages[0]?.data;
+    
 
 
     console.log("modulPage", menu);
