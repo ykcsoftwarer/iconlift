@@ -3,6 +3,7 @@ import {Link, useParams} from 'react-router-dom';
 import { useIconContext } from '../context/Context';
 import HeaderThree from '../common/header/HeaderThree';
 import FooterOne from '../common/footer/FooterOne';
+import CategorySpare from '../Kişiler/Hümeyra/yedek/CategorySpare';
 
 const SpareDetail = () => {
  
@@ -11,67 +12,80 @@ const SpareDetail = () => {
     const {fetchPageData, page ,lang}= useIconContext()
     useEffect(() => {
         fetchPageData(slug)
-    },[lang])
-    const modulPage = page?.filter((page) => page?.modulName === "productdetails")
-    const data = modulPage[0]?.data;
+    },[lang ,slug])
+    const modulPage = page?.filter((page) => page?.modulName === "categoriesmenu")
+  
+    const menu = modulPage[0]?.menu;
+
+    const modulPages = page?.filter((page) => page?.modulName === "productdetails")
+      const data = modulPages[0]?.data;
+
+    
+  console.log("modulll", menu);
+    console.log("xx",data)
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
              <HeaderThree />
            
-                {/* <section className="services-three">
-                    <div className="shape1"><img src={publicUrl+"assets/images/shapes/services-v3-shape1.png"} alt="#" /></div>
-                    <div className="shape2 rotate-me"><img src={publicUrl+"assets/images/update1.0/services-v3-shape2.png"} alt="#" /></div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-12">
-                                         
-                                <div className="services-three__top">
-                                    <div className="sec-title">
-                                        <div className="sec-title__tagline">
-                                        <span className="left"></span> <h6>İCONLİFT</h6> <span className="right"></span>
-                                        </div>
-                                        <h2 className="sec-title__title"> <br /> Asansör Sistemleri</h2>
-                                    </div>
-                             
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="row">
-{categoriesData?.map((k,index)=>{
-return (
-    <div className="col-xl-3 col-lg-6 col-md-6">
-    <div className="services-three__single">
-        <div className="services-three__single__bg"
-         style={{backgroundImage: `url(${k.image})`}}
-        ></div>
-        <div className="services-three__single-icon">
-            <span className="icon-crane"></span>
-        </div>
-        <h3 className=''>
-            <Link 
-           to={`/${asansorPath}/${k?.slug}`}>{k.title}</Link></h3>
-        <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
-        <div className="btn-box">
-            <Link 
-            to={`/${asansorPath}/${k?.slug}`}>
-                <span className="icon-right-arrow"></span></Link>
-        </div>
-    </div>
-</div>
-)
-
-})}
+   
                            
                          
+             <section className="services-details-page">
+                    <div className="container">
+                        <div className="row">
+                            {/* Start Services Details Content */}
+                            <div className="col-xl-7 col-lg-7">
+                                <div className="services-details__content" >
+                                   
+                                    <div className="services-details__text-box1">
+                                        <div className="title">
+                                            <h2 style={{textTransform:"uppercase"}}>
+                                            {slug}
 
-                          
+                                            </h2>
+                                        </div>
+                                        <p className="text-1">{data?.content1}</p>
+
+                                        
+                                        
+                                    </div>
+ <div className="services-details__img1"
+
+ >
+                                        <img src={data?.image} alt="" />
+                                    </div>
+                       
+                                </div>
+                            </div>
+                            {/* End Services Details Content */}
+
+                            {/* Start Services Details Sidebar */}
+                            <div className="col-xl-5 col-lg-5">
+                                <div className="services-details__sidebar">
+                                 
+                                   
+                                     <CategorySpare menu={menu} />
+                                  
+                                </div>
+                            </div>
+                        
+                            <div className="row">
+  {data?.images &&
+    data?.images?.map((image, index) => (
+      <div className="services-details__content col-md-4" key={index}>
+        <img 
+        src={image} alt="" style={{ height: '250px' }} />
+      </div>
+    ))}
+</div>
                         </div>
                     </div>
-                </section> */}
+                </section>
+                          
+           
 
-              <img src={data?.image} alt="" />
+
                 <FooterOne />
             </>
         )
