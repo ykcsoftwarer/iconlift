@@ -44,7 +44,7 @@ const AnasayfaVideo = () => {
                                     <div className="inner">
                                         <img src={Module1Data?.image} alt="#" />
                                         <div className="about-three__img-video wow zoomIn" data-wow-delay="100ms">
-                                            <a href={Module1Data?.url} className="video-popup">
+                                            <a href={Module1Data?.video} className="video-popup">
                                                 <div className="about-three__img-video-icon">
                                                     <span className="fa fa-play"></span>
                                                     <i className="ripple"></i>
