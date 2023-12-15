@@ -50,7 +50,7 @@ return (
         <h3 className=''>
             <Link 
            to={`/${asansorPath}/${k?.slug}`}>{k.title}</Link></h3>
-        <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
+        
         <div className="btn-box">
             <Link 
             to={`/${asansorPath}/${k?.slug}`}>
