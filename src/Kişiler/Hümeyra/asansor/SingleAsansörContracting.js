@@ -56,7 +56,11 @@ const SingleAsansörContracting = () => {
     console.log("veee",modulPages)
     const data = modulPages[0]?.data;
     
-
+    const content1 = data?.content1;
+    const parser = new DOMParser();
+    const cleanHtml = parser.parseFromString(content1, "text/html")?.body
+      .textContent;
+    const dangerouslyHtml = { __html: cleanHtml };
 
     console.log("modulPage", menu);
     
@@ -74,14 +78,17 @@ const SingleAsansörContracting = () => {
                                         <img src={data?.image} alt="" />
                                     </div>
                                     <div className="services-details__text-box1">
-                                        <div className="title">
+                                        <div className="title text-center">
                                             <h2 style={{textTransform:"uppercase"}}>
-                                            {slug}
+                                            {data?.title1}
 
                                             </h2>
                                         </div>
-                                        <p className="text-1">{data?.content1}</p>
-
+                                        {/* <p className="text-1">{data?.content1}</p> */}
+                                        <p
+                    className="text-[14px] lg:text-[16px] text-center xl:px-4 w-full"
+                    dangerouslySetInnerHTML={dangerouslyHtml}
+                  ></p>
                                         
                                         
                                     </div>
@@ -106,6 +113,8 @@ const SingleAsansörContracting = () => {
                                 </div>
                             </div>
                             {/* End Services Details Sidebar */}
+
+                  
                         </div>
                     </div>
                 </section>

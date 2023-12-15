@@ -6,13 +6,15 @@ import AsansorOne from '../Kişiler/Hümeyra/asansor/AsansorOne';
 import { useParams } from 'react-router-dom';
 import BreadcrumbElevator from '../common/breadcrumb/BreadcrumbElevator';
 
+
 const AsansörSistemleri = () => {
-  const { categorySlug,slug} = useParams();
+  const { slug} = useParams();
+  console.log("aa",slug)
   return (
     <>
      <HeaderThree />
      <BreadcrumbElevator
-                heading="Asansör Çeşitleri" currentPage={categorySlug} 
+               heading="Asansör Çeşitleri"  
             />
             <AsansorOne />
             {/* <BrandOne /> */}
