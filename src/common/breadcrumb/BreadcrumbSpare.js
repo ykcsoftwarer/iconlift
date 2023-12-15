@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-export default class BreadcrumbElevator extends React.Component {
+export default class BreadcrumbSpare extends React.Component {
     render(){
         let heading = this.props.heading;
         const product =this.props.product

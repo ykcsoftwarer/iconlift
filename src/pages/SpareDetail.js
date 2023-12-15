@@ -41,7 +41,7 @@ const SpareDetail = () => {
                                     <div className="services-details__text-box1">
                                         <div className="title">
                                             <h2 style={{textTransform:"uppercase"}}>
-                                            {slug}
+                                            {data?.title1}
 
                                             </h2>
                                         </div>
