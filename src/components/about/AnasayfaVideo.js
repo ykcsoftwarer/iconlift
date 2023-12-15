@@ -10,7 +10,11 @@ const AnasayfaVideo = () => {
     
     // const Module1Data = data[2]?.data
 
-
+    const content1 = Module1Data?.content1;
+    const parser = new DOMParser();
+    const cleanHtml = parser.parseFromString(content1, "text/html")?.body
+      .textContent;
+    const dangerouslyHtml = { __html: cleanHtml };
   
    useEffect(() => {
 
@@ -58,13 +62,13 @@ const AnasayfaVideo = () => {
                                             <h6> {Module1Data?.title1}
  </h6> 
                                         </div>
-                                        <h2 className="sec-title__title">{Module1Data?.title2}
-</h2>
+                                        {/* <h2 className="sec-title__title">{Module1Data?.title2}
+</h2> */}
                                     </div>
 
                                     <div className="about-three__content-inner">
                                         <div className="text1">
-                                            <p>{Module1Data?.content1}</p>
+                                            <p dangerouslySetInnerHTML={dangerouslyHtml}></p>
                                         </div>
                                         <div className="text2">
                                             <h4>İconlift Asansör Seçmenin Faydaları </h4>

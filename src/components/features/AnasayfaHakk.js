@@ -35,7 +35,7 @@ export default class FeatureFour extends React.Component {
                                     </div>
                                     <div className="feature-four__single-content">
                                         <span>İCONLİFT ASANSÖR</span>
-                                        <h2><Link to={process.env.PUBLIC_URL + `/services`}>HAKKIMIZDA</Link></h2>
+                                        <h2><Link to={`/kurumsal/hakkimizdan`}>HAKKIMIZDA</Link></h2>
                                         <p>İconlift Asansör, Konya'da kurulmuş, asansör sektöründe kaliteli
               ve güvenli ürünler tedarik eden ve ihraç eden bir firmadır.
               </p>
@@ -62,7 +62,7 @@ export default class FeatureFour extends React.Component {
                                     </div>
                                     <div className="feature-four__single-content">
                                          <span>İCONLİFT ASANSÖR</span>
-                                        <h2><Link to={process.env.PUBLIC_URL + `/services`}>VİZYONUMUZ</Link></h2>
+                                        <h2><Link to={`/kurumsal/vizyonumuz`}>VİZYONUMUZ</Link></h2>
                                         <p>Asansör sektöründe varolan rekabet koşulları ve bilinç düzeyi artmış müşterilerin değişen istek ve beklentilerini  sürekli geliştirilmesinizorunlu kılmaktadır. </p>
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@ export default class FeatureFour extends React.Component {
                                     </div>
                                     <div className="feature-four__single-content">
                                     <span>İCONLİFT ASANSÖR</span>
-                                        <h2><Link to={process.env.PUBLIC_URL + `/services`}>MİSYONUMUZ</Link></h2>
+                                        <h2><Link to={`/kurumsal/misyonumuz`}>MİSYONUMUZ</Link></h2>
                                         <p>Müşteri beklentilerini aşan yüksek kaliteli hizmeti alım imkanı sağlamak, Müşteri sadakatini temin etmek, Müşterilerine zamanında ve yaratıcı çözümler önermekteyiz. </p>
                                     </div>
                                 </div>

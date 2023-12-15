@@ -95,13 +95,13 @@ function App() {
               element={<SpareDetail />}
             />
             <Route
-              path={`/vizyonumuz`}
+              path={`/kurumsal/vizyonumuz`}
               exact
               element={<GeneralContracting />}
             />
-            <Route path={`/misyonmuz`} exact element={<MetrialManagment />} />
-            <Route path={`/hakkimizda`} exact element={<ServicesPage />} />
-            <Route path={`/iletisim`} exact element={<ContactPage />} />
+            <Route path={`/kurumsal/misyonumuz`} exact element={<MetrialManagment />} />
+            <Route path={`/kurumsal/hakkimizdan`} exact element={<ServicesPage />} />
+            <Route path={`iletisim`} exact element={<ContactPage />} />
             <Route path={`/*`} exact element={<Error />} />
           </Routes>
           <ScrollToTop
