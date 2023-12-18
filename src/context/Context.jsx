@@ -15,6 +15,7 @@ export function IconProvider({ children }) {
   const [langData, setLangData] = useState([]);
   const [productPath, setproductPath] = useState("urunler");
   const [asansorPath, setasansorPath] = useState("asansor-cesitleri");
+  const [sparePath, setsparePath] = useState("yedek-parca");
   const [translations, setTranslations] = useState();
   const [about, setAbout] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -31,6 +32,13 @@ export function IconProvider({ children }) {
       setasansorPath("asansor-cesitleri");
     } else if (lang == "en") {
       setasansorPath("elevator-types");
+    }
+  };
+  const spareLang = () => {
+    if (lang == "tr") {
+      setsparePath("yedek-parca");
+    } else if (lang == "en") {
+      setsparePath("spare-part");
     }
   };
 
@@ -107,6 +115,7 @@ export function IconProvider({ children }) {
     fetchLangData();
     productLang();
     asansorLang();
+    spareLang()
     fetchTranslationData();
     fetchAboutData();
     setTimeout(() => {
@@ -122,6 +131,7 @@ export function IconProvider({ children }) {
     page,
     productPath,
     asansorPath,
+    sparePath,
     translations,
     about,
     isLoading,
