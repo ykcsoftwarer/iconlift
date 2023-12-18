@@ -1,15 +1,10 @@
 import React from "react";
 import HeaderThree from "../common/header/HeaderThree";
-
 import FooterOne from "../common/footer/FooterOne";
 import Spare from "../components/spare/Spare";
-import { useParams } from "react-router-dom";
 import BreadcrumbSpare from "../common/breadcrumb/BreadcrumbSpare";
 
 const SparePart = () => {
-  const { categorySlug, slug } = useParams();
-  console.log("yy", categorySlug);
-
   return (
     <>
       <HeaderThree />

@@ -57,6 +57,7 @@ function App() {
           <ScrollToTopRoute />
 
           <Routes>
+            <Route path={`/`} exact element={<HomeDefault />} />
             <Route path={`/index`} exact element={<HomeDefault />} />
 
             <Route path={`/${productPath}`} exact element={<Product />} />
