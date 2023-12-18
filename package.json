@@ -1,7 +1,11 @@
 {
-  "name": "const",
+  "name": "iconlift",
   "version": "0.1.0",
+<<<<<<< HEAD
   "homepage": "iconliftelevator",
+=======
+  "homepage": "",
+>>>>>>> 78c26086e8240803831fb25516739d9887d12734
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

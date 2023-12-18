@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import WOW from "wowjs";
@@ -24,16 +24,14 @@ import ContactPage from "./pages/Iletisim";
 import Product from "./pages/Product";
 import ProductDetail from "./pages/ProductDetail";
 
-import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
+import Details from "./pages/ProductDetails";
 import { useIconContext } from "./context/Context";
-import { CircleLoader } from "react-spinners";
+
+import SparePart from "./pages/SparePart";
+import SpareDetail from "./pages/SpareDetail";
 
 function App() {
-  const { productPath, asansorPath, isLoading } = useIconContext();
-  const containerStyle = {
-    background:
-      "linear-gradient(90deg, rgba(19,24,89,0.9416141456582633) 19%, rgba(113,0,0,0.9360119047619048) 48%, rgba(5,33,147,0.8827906162464986) 83%)",
-  };
+  const { productPath, asansorPath, isLoading, sparePath } = useIconContext();
   useEffect(() => {
     new WOW.WOW({
       live: false,
@@ -43,24 +41,23 @@ function App() {
     <>
       {isLoading ? (
         <div className="loader-container">
-
-        
-            <h2 className="loader-page">
-              <span>İ</span>
-              <span>C</span>
-              <span>O</span>
-              <span>N</span>
-              <span>L</span>
-              <span>İ</span>
-              <span>F</span>
-              <span>T</span>
-            </h2>
-            </div>
+          <h2 className="loader-page">
+            <span>İ</span>
+            <span>C</span>
+            <span>O</span>
+            <span>N</span>
+            <span>L</span>
+            <span>İ</span>
+            <span>F</span>
+            <span>T</span>
+          </h2>
+        </div>
       ) : (
         <Router>
           <ScrollToTopRoute />
 
           <Routes>
+            <Route path={`/`} exact element={<HomeDefault />} />
             <Route path={`/index`} exact element={<HomeDefault />} />
 
             <Route path={`/${productPath}`} exact element={<Product />} />
@@ -76,15 +73,6 @@ function App() {
               element={<Details />}
             />
 
-            {/* <Route path={`/products`} exact element={<Product />} />
-
-        <Route path={`/products/:slug`} exact element={<ProductDetail />} />
-        <Route
-          path={`/products/:categorySlug/:slug`}
-          exact
-          element={<Details />}
-        /> */}
-
             <Route
               path={`/${asansorPath}`}
               exact
@@ -95,15 +83,28 @@ function App() {
               exact
               element={<AsansörDetail />}
             />
-
+            <Route path={`/${sparePath}`} exact element={<SparePart />} />
             <Route
-              path={`/vizyonumuz`}
+              path={`/${sparePath}/:slug`}
+              exact
+              element={<SpareDetail />}
+            />
+            <Route
+              path={`/kurumsal/vizyonumuz`}
               exact
               element={<GeneralContracting />}
             />
-            <Route path={`/misyonmuz`} exact element={<MetrialManagment />} />
-            <Route path={`/hakkimizda`} exact element={<ServicesPage />} />
-            <Route path={`/iletisim`} exact element={<ContactPage />} />
+            <Route
+              path={`/kurumsal/misyonumuz`}
+              exact
+              element={<MetrialManagment />}
+            />
+            <Route
+              path={`/kurumsal/hakkimizdan`}
+              exact
+              element={<ServicesPage />}
+            />
+            <Route path={`iletisim`} exact element={<ContactPage />} />
             <Route path={`/*`} exact element={<Error />} />
           </Routes>
           <ScrollToTop

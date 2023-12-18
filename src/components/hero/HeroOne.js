@@ -66,7 +66,7 @@ const HeroOne = () => {
                       <h3>{k.title1}</h3>
                       <h2>{k.title2}</h2>
                       <p>{k.button}</p>
-                      <div className="btn-box">
+                      {/* <div className="btn-box">
                         <Link
                           to={k.url}
                           className="thm-btn"
@@ -74,7 +74,7 @@ const HeroOne = () => {
                         >
                           {k.button}
                         </Link>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
