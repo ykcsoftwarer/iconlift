@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import WOW from "wowjs";
@@ -24,14 +24,14 @@ import ContactPage from "./pages/Iletisim";
 import Product from "./pages/Product";
 import ProductDetail from "./pages/ProductDetail";
 
-import Details from "./Kişiler/Fatih/Pagesss/ürünler/Details";
+import Details from "./pages/ProductDetails";
 import { useIconContext } from "./context/Context";
 
 import SparePart from "./pages/SparePart";
 import SpareDetail from "./pages/SpareDetail";
 
 function App() {
-  const { productPath, asansorPath, isLoading,sparePath } = useIconContext();
+  const { productPath, asansorPath, isLoading, sparePath } = useIconContext();
   useEffect(() => {
     new WOW.WOW({
       live: false,
@@ -41,19 +41,17 @@ function App() {
     <>
       {isLoading ? (
         <div className="loader-container">
-
-        
-            <h2 className="loader-page">
-              <span>İ</span>
-              <span>C</span>
-              <span>O</span>
-              <span>N</span>
-              <span>L</span>
-              <span>İ</span>
-              <span>F</span>
-              <span>T</span>
-            </h2>
-            </div>
+          <h2 className="loader-page">
+            <span>İ</span>
+            <span>C</span>
+            <span>O</span>
+            <span>N</span>
+            <span>L</span>
+            <span>İ</span>
+            <span>F</span>
+            <span>T</span>
+          </h2>
+        </div>
       ) : (
         <Router>
           <ScrollToTopRoute />
@@ -73,7 +71,7 @@ function App() {
               exact
               element={<Details />}
             />
-           
+
             <Route
               path={`/${asansorPath}`}
               exact
@@ -84,12 +82,8 @@ function App() {
               exact
               element={<AsansörDetail />}
             />
-             <Route
-              path={`/${sparePath}`}
-              exact
-              element={<SparePart />}
-            />
- <Route
+            <Route path={`/${sparePath}`} exact element={<SparePart />} />
+            <Route
               path={`/${sparePath}/:slug`}
               exact
               element={<SpareDetail />}
@@ -99,8 +93,16 @@ function App() {
               exact
               element={<GeneralContracting />}
             />
-            <Route path={`/kurumsal/misyonumuz`} exact element={<MetrialManagment />} />
-            <Route path={`/kurumsal/hakkimizdan`} exact element={<ServicesPage />} />
+            <Route
+              path={`/kurumsal/misyonumuz`}
+              exact
+              element={<MetrialManagment />}
+            />
+            <Route
+              path={`/kurumsal/hakkimizdan`}
+              exact
+              element={<ServicesPage />}
+            />
             <Route path={`iletisim`} exact element={<ContactPage />} />
             <Route path={`/*`} exact element={<Error />} />
           </Routes>

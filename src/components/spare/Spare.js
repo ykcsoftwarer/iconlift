@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
 import {Link, useParams} from 'react-router-dom';
-import { useIconContext } from '../../../context/Context';
+import { useIconContext } from '../../context/Context';
 
-const AsansorOne =() => {
+
+const Spare =() => {
 
     const {slug}= useParams()
-    const {fetchPageData , page ,lang , asansorPath}= useIconContext()
+    const {fetchPageData , page ,lang , sparePath}= useIconContext()
     useEffect(() => {
         if(lang === "tr"){
   
-            fetchPageData ("asansor-cesitleri")
+            fetchPageData ("yedek-parca")
         }else if(lang === "en"){
-            fetchPageData ("elevator-types")
+            fetchPageData ("spare-part")
         }
     },[lang,slug])
 
@@ -54,7 +55,7 @@ const AsansorOne =() => {
                     <div className="services-one__single-content-title">
                       <h2>
                         <Link
-                          to={`/${asansorPath}/${item?.slug}`}>
+                          to={`/${sparePath}/${item?.slug}`}>
                         
                           {item.title}
                         </Link>
@@ -66,7 +67,7 @@ const AsansorOne =() => {
                       </p>
                       <div className="services-one__single-btn">
                         <Link
-                          to={`/${asansorPath}/${item?.slug}`}
+                          to={`/${sparePath}/${item?.slug}`}
                           className="thm-btn"
                           data-text={item?.title}
                         >
@@ -90,4 +91,4 @@ const AsansorOne =() => {
     
 };
 
-export default AsansorOne;
+export default Spare;

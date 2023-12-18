@@ -1,16 +1,17 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useIconContext } from "../../../context/Context";
+import { useIconContext } from "../../context/Context";
 
 
-const CategoryProduct = ({menu}) => {
-  const {productPath } = useIconContext()
+
+const CategoryAsansor = ({menu}) => {
+  const {asansorPath } = useIconContext()
   const location = useLocation();
 console.log(menu);
   return (
     <div className="services-details__sidebar-single services-details-category">
       <div className="title">
-        <h2>Ürünler Category</h2>
+        <h2>Elevator Category</h2>
       </div>
       <ul className="services-details-category-list">
       {menu?.map((item)=>{
@@ -19,8 +20,8 @@ console.log(menu);
         
         <li>
           <Link
-            to={`/${productPath}/${item?.slug}`}
-            className={location.pathname === `/${productPath}/${item?.slug}` ? "active" : ""}
+            to={`/${asansorPath}/${item?.slug}`}
+            className={location.pathname === `/${asansorPath}/${item?.slug}` ? "active" : ""}
           >
             {item?.title}
             <span className="icon-right-arrow"></span>
@@ -29,12 +30,9 @@ console.log(menu);
           </>
         )
       })}
-       
-       
-       
       </ul>
     </div>
   );
 };
 
-export default CategoryProduct;
+export default CategoryAsansor;

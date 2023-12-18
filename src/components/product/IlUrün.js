@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useIconContext } from "../../../context/Context";
+import { useIconContext } from "../../context/Context";
 
 const IlUrün = () => {
   const { slug } = useParams();
@@ -12,7 +12,7 @@ const IlUrün = () => {
     (page) => page?.modulName === "productdetails"
   );
   const data = modulPage[0]?.data;
-  
+
   const content1 = data?.content1;
   const parser = new DOMParser();
   const cleanHtml = parser.parseFromString(content1, "text/html")?.body
