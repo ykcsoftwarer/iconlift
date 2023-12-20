@@ -1,0 +1,9 @@
+{
+	"siteId": "7ddf7d17-ca5a-44ee-b4c7-9102eb340457",
+	"homepage": "iconliftelevator",
+	"scripts": {
+	
+		"build": "react-scripts build"
+	
+	  }
+}

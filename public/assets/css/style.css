@@ -3029,7 +3029,7 @@ a.sc-hLBbgP {
 .project-one__menu-box .project-filter li {
   position: relative;
   display: inline-block;
-  float: left;
+  /* float: left; */
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -4256,7 +4256,7 @@ a.sc-hLBbgP {
 .footer-one__top {
   position: relative;
   display: block;
-  padding: 112px 0px 112px;
+  padding: 32px 0px 64px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -4642,7 +4642,7 @@ a.sc-hLBbgP {
 .footer-one__bottom {
   position: relative;
   display: block;
-  padding: 32px 0px 32px;
+  padding: 16px 0px 16px;
 }
 
 .footer-one__bottom-inner {
@@ -6684,7 +6684,7 @@ a.sc-hLBbgP {
 .services-details__tab-button .tab-buttons li {
   position: relative;
   display: inline-block;
-  float: left;
+  /* float: left; */
   background: #f2f2f2;
   cursor: pointer;
   border-top: 1px solid #dcdcdf;
@@ -7040,7 +7040,7 @@ a.sc-hLBbgP {
 .services-details-category-list li a span::before {
   position: relative;
   display: inline-block;
-  float: right;
+  /* float: right; */
   color: var(--thm-black);
   font-size: 25px;
   line-height: 28px;
@@ -7465,7 +7465,7 @@ a.sc-hLBbgP {
 .protfolio-details-category-list li a span::before {
   position: relative;
   display: inline-block;
-  float: right;
+  /* float: right; */
   color: var(--thm-black);
   font-size: 25px;
   line-height: 28px;
@@ -7520,7 +7520,7 @@ a.sc-hLBbgP {
 .protfolio-details-tags-list li {
   position: relative;
   display: inline-block;
-  float: left;
+  /* float: left; */
   padding: 0px 7.5px 0px;
   margin-bottom: 15px;
 }
@@ -8525,7 +8525,7 @@ a.sc-hLBbgP {
 .sidebar__tags-list li {
   position: relative;
   display: inline-block;
-  float: left;
+  /* float: left; */
   padding: 0px 7.5px 0px;
   margin-bottom: 15px;
 }
@@ -11252,7 +11252,7 @@ Cta One
 .blog-list__single-content .meta-info li {
   position: relative;
   display: inline-block;
-  float: left;
+  /* float: left; */
   line-height: 24px;
   margin-right: 20px;
 }
@@ -11466,7 +11466,7 @@ Cta One
 .blog-standard__single-content .meta-info li {
   position: relative;
   display: inline-block;
-  float: left;
+  /* float: left; */
   line-height: 24px;
   margin-right: 20px;
 }
