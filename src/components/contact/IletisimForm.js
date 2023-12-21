@@ -51,7 +51,8 @@ export default class ContactForm extends React.Component {
                                                 <h3>Email </h3>
                                                 <p className="email1"><a href="mailto:info@madina.com">info@iconlift.com.tr</a></p>
                                                 <p className="email2"><a href="mailto:info@madina.com">muhasebe@iconlift.com.tr</a></p>
-                                                <p className="email2"><a href="mailto:info@madina.com">foreingtradesalesmanager@iconlift.com.tr</a></p>
+                                                <h6 className="email2">Foreing Trade Sales Manager Contact:</h6>
+                                                <p className="email3"><a href="mailto:info@madina.com">export@iconlift.com.tr</a></p>
                                             </div>
                                         </div>
                                     </div>
