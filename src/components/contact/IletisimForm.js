@@ -8,7 +8,7 @@ export default class ContactForm extends React.Component {
                     <div className="container">
                         <div className="row">
                         <div className="sec-title text-center">
-                                        <h1>İCONLİFT ASANSÖR OTOMOTİV İTH. İHR. LTD. ŞTİ.</h1>
+                                        <h1>İCONLİFT ASANSÖR OTOMOTİV İTHALAT İHRACAT LTD. ŞTİ.</h1>
                                     </div>
                             <div className="col-xl-4 col-lg-4 col-md-5"><br/>
                                 <div className="contact-page__content">
@@ -51,7 +51,8 @@ export default class ContactForm extends React.Component {
                                                 <h3>Email </h3>
                                                 <p className="email1"><a href="mailto:info@madina.com">info@iconlift.com.tr</a></p>
                                                 <p className="email2"><a href="mailto:info@madina.com">muhasebe@iconlift.com.tr</a></p>
-                                                <p className="email2"><a href="mailto:info@madina.com">foreingtradesalesmanager@iconlift.com.tr</a></p>
+                                                <h6 className="email3"><a href="mailto:info@madina.com">Dış Ticaret Satış Yetkilisi:</a></h6>
+                                                <p className="email3"><a href="mailto:info@madina.com">export@iconlift.com.tr</a></p>
                                             </div>
                                         </div>
                                     </div>
