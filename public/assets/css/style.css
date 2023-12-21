@@ -1602,7 +1602,7 @@ a.sc-hLBbgP {
 
 .main-header-one__middle ul li .text span {
   color: #ffffff;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 25px;
   font-weight: 400;
   font-family: var(--thm-font-2);
@@ -1610,7 +1610,7 @@ a.sc-hLBbgP {
 }
 
 .main-header-one__middle ul li .text p {
-  font-size: 18px;
+  font-size: 12px;
   line-height: 28px;
   font-weight: 400;
   font-family: var(--thm-font-2);
@@ -1618,7 +1618,7 @@ a.sc-hLBbgP {
 }
 
 .main-header-one__middle ul li .text .email {
-  font-size: 18px;
+  font-size: 12px;
   line-height: 28px;
   font-weight: 400;
   font-family: var(--thm-font-2);
@@ -1636,7 +1636,7 @@ a.sc-hLBbgP {
 }
 
 .main-header-one__middle ul li .text .number {
-  font-size: 18px;
+  font-size: 12px;
   line-height: 28px;
   font-weight: 400;
   font-family: var(--thm-font-2);
