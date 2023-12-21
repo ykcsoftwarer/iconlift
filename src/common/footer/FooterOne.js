@@ -60,11 +60,17 @@ const FooterOne = ({ }) => {
                                                                 <span className="second icon-facebook-app-symbol"></span>
                                                             </a>
                                                         </li>
-
+     <li>
+                                                            <a href="https://linkedin.com">
+                                                                <span className="first icon-linkedin"></span>
+                                                                <span className="second icon-linkedin"></span>
+                                                            </a>
+                                                        </li>
+                                                   
                                                         <li>
-                                                            <a href="https://twitter.com">
-                                                                <span className="first icon-twitter"></span>
-                                                                <span className="second icon-twitter"></span>
+                                                            <a href="https://www.instagram.com">
+                                                            <span className="first icon-pinterest"></span>
+                                                                <span className="second icon-pinterest"></span>
                                                             </a>
                                                         </li>
 
@@ -76,9 +82,9 @@ const FooterOne = ({ }) => {
                                                         </li>
 
                                                         <li>
-                                                            <a href="https://linkedin.com">
-                                                                <span className="first icon-linkedin"></span>
-                                                                <span className="second icon-linkedin"></span>
+                                                            <a href="https://twitter.com">
+                                                                <span className="first icon-twitter"></span>
+                                                                <span className="second icon-twitter"></span>
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -91,7 +97,7 @@ const FooterOne = ({ }) => {
                                             <div className="footer-widget__column footer-widget__services">
 
                                                 <ul className="footer-widget__services-list">
-                                                    <li className="footer-widget__services-list-item"><Link to="/services">{data?.footerPlanning}</Link></li>
+                                                    <li className="footer-widget__services-list-item"><Link to="/services">{data?.footerProjects}</Link></li>
                                                     <li  className="footer-widget__services-list-item"><Link to="/blog">{data?.footerRequests}</Link></li>
                                                     <li className="footer-widget__services-list-item"><Link to="/portfolio">{data?.footerOffers}</Link></li>
                                                     <li className="footer-widget__services-list-item"><Link to="/">{data?.footerExperience}</Link></li>
