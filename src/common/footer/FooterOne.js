@@ -15,6 +15,7 @@ const FooterOne = ({ }) => {
     const siteData = about?.data;
     const logo = siteData?.logo02;
     // console.log("trans", about);
+
     return (
         <>
             <footer className="footer-one-sec">
@@ -86,29 +87,29 @@ const FooterOne = ({ }) => {
                                         </div>
 
                                         <div className="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s">
-                                        <h2 className="footer-widget__title ">Şirket Hakkında</h2>
+                                        <h2 className="footer-widget__title ">{data?.footerTitle1}</h2>
                                             <div className="footer-widget__column footer-widget__services">
 
                                                 <ul className="footer-widget__services-list">
-                                                    <li className="footer-widget__services-list-item"><Link to="/services">Şirket Projeleri</Link></li>
-                                                    <li  className="footer-widget__services-list-item"><Link to="/blog">Asansör Ürünleri Talepleri</Link></li>
-                                                    <li className="footer-widget__services-list-item"><Link to="/portfolio">Özel Teklifler Hazırlama</Link></li>
-                                                    <li className="footer-widget__services-list-item"><Link to="/">Sistematik Çalışma Deneyimi</Link></li>
+                                                    <li className="footer-widget__services-list-item"><Link to="/services">{data?.footerPlanning}</Link></li>
+                                                    <li  className="footer-widget__services-list-item"><Link to="/blog">{data?.footerRequests}</Link></li>
+                                                    <li className="footer-widget__services-list-item"><Link to="/portfolio">{data?.footerOffers}</Link></li>
+                                                    <li className="footer-widget__services-list-item"><Link to="/">{data?.footerExperience}</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
 
                                         <div className="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.5s">
                                             <div className="footer-widget__column footer-widget__explore">
-                                        <h2 className="footer-widget__title">Ar-Ge & Kazanımlarımız</h2>
+                                        <h2 className="footer-widget__title">{data?.footerTitle2}</h2>
 
                                                 <ul className="footer-widget__explore-list"> 
                                                  
-                                                    <li className="footer-widget__explore-list-item"><Link to="/abaut">Proje Planlama</Link></li>
-                                                    <li className="footer-widget__explore-list-item"><Link to="/">Maliyet Hesaplama</Link></li>
-                                                    <li className="footer-widget__explore-list-item"><Link to="/">Görüşlerimiz</Link></li>
-                                                    <li className="footer-widget__explore-list-item"><Link to="/">Asansör Sektörü</Link></li>
-                                                    <li className="footer-widget__explore-list-item"><Link to="/">Arge & Reform</Link></li>
+                                                    <li className="footer-widget__explore-list-item"><Link to="/abaut">{data?.footerPlanning}</Link></li>
+                                                    <li className="footer-widget__explore-list-item"><Link to="/">{data?.footerCost}</Link></li>
+                                                    <li className="footer-widget__explore-list-item"><Link to="/">{data?.footerViews}</Link></li>
+                                                    <li className="footer-widget__explore-list-item"><Link to="/">{data?.footerIndustry}</Link></li>
+                                                    <li className="footer-widget__explore-list-item"><Link to="/">{data?.footerReform}</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
