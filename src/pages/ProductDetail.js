@@ -62,14 +62,14 @@ const ProductDetail = () => {
                               </Link>
                             </h2>
                             <p>{item?.content1}</p>
-                            <div className="btn-box">
+                            {/* <div className="btn-box">
                               <Link
                                 to={`/${productPath}/${slug}/${item?.slug}`}
                               >
                                 Read More{" "}
                                 <span className="icon-plus-sign"></span>
                               </Link>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </div>
