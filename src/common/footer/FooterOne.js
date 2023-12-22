@@ -109,8 +109,7 @@ const FooterOne = ({ }) => {
                                             <div className="footer-widget__column footer-widget__explore">
                                         <h2 className="footer-widget__title">{data?.footerTitle2}</h2>
 
-                                                <ul className="footer-widget__explore-list"> 
-                                                 
+                                                <ul className="footer-widget__explore-list">
                                                     <li className="footer-widget__explore-list-item"><Link to="/abaut">{data?.footerPlanning}</Link></li>
                                                     <li className="footer-widget__explore-list-item"><Link to="/">{data?.footerCost}</Link></li>
                                                     <li className="footer-widget__explore-list-item"><Link to="/">{data?.footerViews}</Link></li>
