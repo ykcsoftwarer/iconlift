@@ -14,8 +14,8 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import AsansörSistemleri from "./pages/AsansörSistemleri";
-import AsansörDetail from "./pages/AsansörDetail";
+
+// 
 import GeneralContracting from "./pages/Vizyonumuz";
 import ServicesPage from "./pages/Hakkimizda";
 import MetrialManagment from "./pages/Misyonumuz";
@@ -29,6 +29,8 @@ import { useIconContext } from "./context/Context";
 
 import SparePart from "./pages/SparePart";
 import SpareDetail from "./pages/SpareDetail";
+import ElevatorTypes from "./pages/ElevatorTypes";
+import ElevatorDetail from "./pages/ElevatorDetail";
 
 function App() {
   const { productPath, asansorPath, isLoading, sparePath } = useIconContext();
@@ -76,12 +78,12 @@ function App() {
             <Route
               path={`/${asansorPath}`}
               exact
-              element={<AsansörSistemleri />}
+              element={<ElevatorTypes />}
             />
             <Route
               path={`/${asansorPath}/:slug`}
               exact
-              element={<AsansörDetail />}
+              element={<ElevatorDetail />}
             />
             <Route path={`/${sparePath}`} exact element={<SparePart />} />
             <Route

@@ -10,7 +10,7 @@ const SpareDetail = () => {
   const { fetchPageData, page, lang } = useIconContext();
   useEffect(() => {
     fetchPageData(slug);
-  }, [lang, slug]);
+  }, [lang,slug]);
   const modulPage = page?.filter(
     (page) => page?.modulName === "categoriesmenu"
   );
@@ -18,9 +18,10 @@ const SpareDetail = () => {
   const menu = modulPage[0]?.menu;
 
   const modulPages = page?.filter(
-    (page) => page?.modulName === "productdetails"
+    (page) => page?.modulName === "image"
   );
   const data = modulPages[0]?.data;
+
 
   return (
     <>
@@ -31,18 +32,32 @@ const SpareDetail = () => {
           <div className="row">
             {/* Start Services Details Content */}
             <div className="col-xl-7 col-lg-7">
-              <div className="services-details__content">
-                <div className="services-details__text-box1">
-                  <div className="title">
-                    <h2 style={{ textTransform: "uppercase" }}>
-                      {data?.title1}
-                    </h2>
+              <div className="row">
+                {modulPages?.map((modul, modulIndex) => (
+                  <div className="col-md-6 mb-4" key={modulIndex}>
+                    <div className="card" style={{  transition: "transform 0.5s, box-shadow 0.5s",}}
+                        onMouseOver={(e) => {
+                            e.currentTarget.style.transform = "scale(1.05)";
+                            e.currentTarget.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.1)";
+                          }}
+                          onMouseOut={(e) => {
+                            e.currentTarget.style.transform = "scale(1)";
+                            e.currentTarget.style.boxShadow = "none";
+                          }}
+                    >
+                      <img
+                        src={modul?.data?.images[0]}
+                        alt={`Image ${modulIndex + 1}`}
+                        className="card-img-top"
+                        style={{ height: "250px"}}
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">{modul?.data?.title1}</h5>
+                      
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-1">{data?.content1}</p>
-                </div>
-                <div className="services-details__img1">
-                  <img src={data?.image} alt="" />
-                </div>
+                ))}
               </div>
             </div>
             {/* End Services Details Content */}
@@ -54,17 +69,8 @@ const SpareDetail = () => {
               </div>
             </div>
 
-            <div className="row">
-              {data?.images &&
-                data?.images?.map((image, index) => (
-                  <div
-                    className="services-details__content col-md-4"
-                    key={index}
-                  >
-                    <img src={image} alt="" style={{ height: "250px" }} />
-                  </div>
-                ))}
-            </div>
+   
+
           </div>
         </div>
       </section>

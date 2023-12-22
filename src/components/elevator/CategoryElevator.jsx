@@ -4,7 +4,7 @@ import { useIconContext } from "../../context/Context";
 
 
 
-const CategoryAsansor = ({menu}) => {
+const CategoryElevator = ({menu}) => {
   const {asansorPath } = useIconContext()
   const location = useLocation();
 console.log(menu);
@@ -35,4 +35,4 @@ console.log(menu);
   );
 };
 
-export default CategoryAsansor;
+export default CategoryElevator;
