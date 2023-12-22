@@ -2,12 +2,13 @@ import React from 'react'
 import HeaderThree from "../common/header/HeaderThree";
 
 import FooterOne from '../common/footer/FooterOne';
-import AsansorOne from '../components/asansor/AsansorOne';
+
 import { useParams } from 'react-router-dom';
 import BreadcrumbElevator from '../common/breadcrumb/BreadcrumbElevator';
+import ElevatorOne from '../components/elevator/ElevatorOne';
 
 
-const AsansörSistemleri = () => {
+const ElevatorTypes = () => {
   const { slug} = useParams();
   console.log("aa",slug)
   return (
@@ -16,11 +17,11 @@ const AsansörSistemleri = () => {
      <BreadcrumbElevator
                heading="Asansör Çeşitleri"  
             />
-            <AsansorOne/>
+            <ElevatorOne/>
             {/* <BrandOne /> */}
             <FooterOne />
     </>
   )
 }
 
-export default AsansörSistemleri
+export default ElevatorTypes

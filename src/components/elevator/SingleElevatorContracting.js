@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import CategoryAsansor from "./CategoryAsansor";
-import { useIconContext } from "../../context/Context";
 
-const SingleAsansörContracting = () => {
+import { useIconContext } from "../../context/Context";
+import CategoryElevator from "./CategoryElevator";
+
+const SingleElevatorContracting = () => {
   useEffect(() => {
     const $ = window.$;
 
@@ -80,11 +81,10 @@ const SingleAsansörContracting = () => {
                       {data?.title1}
                     </h2>
                   </div>
-                  {/* <p className="text-1">{data?.content1}</p> */}
-                  <p
-                    className="text-[14px] lg:text-[16px] text-center xl:px-4 w-full"
+                  <p className="text-1"
                     dangerouslySetInnerHTML={dangerouslyHtml}
                   ></p>
+                 
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ const SingleAsansörContracting = () => {
 
                 {/* Start Services Details Sidebar Single */}
 
-                <CategoryAsansor menu={menu} />
+                <CategoryElevator menu={menu} />
                 {/* End Services Details Sidebar Single */}
 
                 {/* <ButtonBox />
@@ -112,4 +112,4 @@ const SingleAsansörContracting = () => {
   );
 };
 
-export default SingleAsansörContracting;
+export default SingleElevatorContracting;
