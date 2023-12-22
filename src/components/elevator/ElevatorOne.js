@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useIconContext } from "../../context/Context";
 
 
-const AsansorOne = () => {
+const ElevatorOne = () => {
   const { slug } = useParams();
   const { fetchPageData, page, lang, asansorPath } = useIconContext();
   useEffect(() => {
@@ -49,7 +49,7 @@ const AsansorOne = () => {
                       <div className="services-one__single-content-title">
                         <h2>
                           <Link to={`/${asansorPath}/${item?.slug}`}>
-                            {item.title}
+                            {item?.title}
                           </Link>
                         </h2>
                       </div>
@@ -80,4 +80,4 @@ const AsansorOne = () => {
   );
 };
 
-export default AsansorOne;
+export default ElevatorOne;
