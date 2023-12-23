@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { useIconContext } from "../context/Context";
 import HeaderThree from "../common/header/HeaderThree";
 import CategoryProduct from "../components/product/CategoryProduct";
+import FooterOne from "../common/footer/FooterOne";
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -92,6 +93,7 @@ const ProductDetail = () => {
           </div>
         </div>
       </section>
+      <FooterOne />
     </>
   );
 };
