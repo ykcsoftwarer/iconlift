@@ -25,7 +25,10 @@ const CategoryProduct = ({ menu }) => {
                   }
                 >
                   {item?.title}
-                  <span className="icon-right-arrow"></span>
+                  
+
+                  <span className="icon-right-arrow "></span>
+                  
                 </Link>
               </li>
             </>
