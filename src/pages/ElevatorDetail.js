@@ -9,7 +9,7 @@ import SingleElevatorContracting from '../components/elevator/SingleElevatorCont
 
 const ElevatorDetail = () => {
   const { slug} = useParams();
-  console.log("hh",slug)
+  
   return (
     <>
     <HeaderThree />

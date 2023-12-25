@@ -286,7 +286,6 @@ const MobileMenu = () => {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
-  let publicUrl = process.env.PUBLIC_URL + "/";
   const siteData = about?.data;
   const logo = siteData?.logo01;
   const socialMedia= siteData?.socialMedia

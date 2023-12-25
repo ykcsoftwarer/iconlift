@@ -5,7 +5,7 @@ import { useIconContext } from "../../context/Context";
 const CategoryProduct = ({ menu }) => {
   const { productPath } = useIconContext();
   const location = useLocation();
-  console.log(menu);
+  
   return (
     <div className="services-details__sidebar-single services-details-category">
       <div className="title">
@@ -25,7 +25,10 @@ const CategoryProduct = ({ menu }) => {
                   }
                 >
                   {item?.title}
-                  <span className="icon-right-arrow"></span>
+                  
+
+                  <span className="icon-right-arrow "></span>
+                  
                 </Link>
               </li>
             </>
