@@ -9,7 +9,7 @@ import BreadcrumbProduct from "../common/breadcrumb/BreadcrumbProduct ";
 const Details = () => {
   const { categorySlug, slug } = useParams();
   const repSlug = slug.replace(/-/g, " ");
-  console.log(categorySlug);
+  
   return (
     <>
       <HeaderThree />

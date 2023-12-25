@@ -7,7 +7,7 @@ import { useIconContext } from "../../context/Context";
 const CategorySpare = ({menu}) => {
   const {sparePath } = useIconContext()
   const location = useLocation();
-console.log(menu);
+
   return (
     <div className="services-details__sidebar-single services-details-category">
       <div className="title">

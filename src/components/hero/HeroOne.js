@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import { useIconContext } from "../../context/Context";
 
 const HeroOne = () => {
@@ -7,7 +7,7 @@ const HeroOne = () => {
     const sliderData = data?.find((k)=> k.modulName === "slider")?.data
     
 
-    console.log("slider",sliderData);
+    
   useEffect(() => {
     const $ = window.$;
 
@@ -41,7 +41,7 @@ const HeroOne = () => {
     }
   }, []);
 
-  let publicUrl = process.env.PUBLIC_URL + "/";
+ 
 
   return (
     <>
