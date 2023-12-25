@@ -1,8 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import ButtonBox from "./ButtonBox";
-import ServiceContactBox from "./ServiceContactBox";
-import ServiceSearch from "./ServiceSearch";
+
 
 export default class SingleGeneralContracting extends React.Component {
   componentDidMount() {

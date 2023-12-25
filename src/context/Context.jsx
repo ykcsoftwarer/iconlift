@@ -21,23 +21,23 @@ export function IconProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
 
   const productLang = () => {
-    if (lang == "tr") {
+    if (lang === "tr") {
       setproductPath("urunler");
-    } else if (lang == "en") {
+    } else if (lang === "en") {
       setproductPath("products");
     }
   };
   const asansorLang = () => {
-    if (lang == "tr") {
+    if (lang === "tr") {
       setasansorPath("asansor-cesitleri");
-    } else if (lang == "en") {
+    } else if (lang === "en") {
       setasansorPath("elevator-types");
     }
   };
   const spareLang = () => {
-    if (lang == "tr") {
+    if (lang === "tr") {
       setsparePath("yedek-parca");
-    } else if (lang == "en") {
+    } else if (lang === "en") {
       setsparePath("spare-part");
     }
   };

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {Link} from 'react-router-dom';
+
 import { useIconContext } from '../../context/Context';
 
 const AnasayfaVideo = () => {
@@ -15,8 +15,7 @@ const AnasayfaVideo = () => {
     const cleanHtml = parser.parseFromString(content1, "text/html")?.body
       .textContent;
     const dangerouslyHtml = { __html: cleanHtml };
-//   console.log(content1)
-//   console.log(Module1Data)
+
    useEffect(() => {
 
         const $ = window.$;
@@ -33,7 +32,7 @@ const AnasayfaVideo = () => {
         }
           
     }, []);
-        let publicUrl = process.env.PUBLIC_URL+'/'
+        
         return (
             <>
 

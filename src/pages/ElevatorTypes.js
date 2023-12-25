@@ -10,7 +10,7 @@ import ElevatorOne from '../components/elevator/ElevatorOne';
 
 const ElevatorTypes = () => {
   const { slug} = useParams();
-  console.log("aa",slug)
+  
   return (
     <>
      <HeaderThree />

@@ -9,7 +9,7 @@ const ProjectThree = () => {
     const dataSlider = data[3]?.data
     
 
-    console.log('açık',dataSlider)
+    
    useEffect(() => {
 
         const $ = window.$;
