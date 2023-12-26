@@ -16,7 +16,7 @@ const AnasayfaVideo = () => {
       .textContent;
     const dangerouslyHtml = { __html: cleanHtml };
 //   console.log(content1)
-//   console.log(Module1Data)
+  console.log(Module1Data)
    useEffect(() => {
 
         const $ = window.$;
@@ -43,7 +43,7 @@ const AnasayfaVideo = () => {
                             <div className="col-xl-6">
                                 <div className="about-three__img">
                                     <div className="inner">
-                                        <img src={Module1Data?.image} alt="#" />
+                                        <img src={Module1Data?.image} alt="text/html" />
                                         <div className="about-three__img-video wow zoomIn" data-wow-delay="100ms">
                                             <a href={Module1Data?.video} className="video-popup">
                                                 <div className="about-three__img-video-icon">
