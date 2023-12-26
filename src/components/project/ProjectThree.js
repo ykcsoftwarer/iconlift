@@ -9,7 +9,7 @@ const ProjectThree = () => {
     const dataSlider = data[3]?.data
     
 
-    console.log('açık',dataSlider)
+    
    useEffect(() => {
 
         const $ = window.$;
@@ -74,7 +74,7 @@ const ProjectThree = () => {
           
     }, [slug]);
     
-        let publicUrl = process.env.PUBLIC_URL+'/'
+        
         return (
             <>
                 <section className="project-three">
@@ -122,7 +122,7 @@ const ProjectThree = () => {
                             <div className="col-xl-12">
                                 <div className="project-three-more-project-btn text-center">
                                     <div className="btn-box">
-                                        <Link href="/portfolio" className="thm-btn" data-text="TÜM ÜRÜNLER +">TÜM ÜRÜNLER  +</Link>
+                                        <Link to="/urunler" className="thm-btn" data-text="TÜM ÜRÜNLER +">TÜM ÜRÜNLER  +</Link>
                                     </div>
                                 </div>
                             </div>

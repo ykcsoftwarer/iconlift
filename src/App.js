@@ -106,6 +106,11 @@ function App() {
               exact
               element={<ServicesPage />}
             />
+            <Route
+              path={`/kurumsal`}
+              exact
+              element={<ServicesPage />}
+            />
             <Route path={`iletisim`} exact element={<ContactPage />} />
             <Route path={`/*`} exact element={<Error />} />
           </Routes>
