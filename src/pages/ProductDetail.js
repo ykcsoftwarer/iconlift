@@ -13,7 +13,7 @@ const ProductDetail = () => {
   useEffect(() => {
     fetchPageData(slug);
   }, [lang, slug]);
-  console.log("product", page);
+  
 
   const modulPage = page?.filter(
     (page) => page?.modulName === "categoriesmenu"
@@ -21,7 +21,7 @@ const ProductDetail = () => {
 
   const data = modulPage[0]?.data;
   const menu = modulPage[0]?.menu;
-  console.log("modulPage", menu);
+  
   return (
     <>
       <HeaderThree />

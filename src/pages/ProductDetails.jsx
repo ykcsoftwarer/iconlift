@@ -8,15 +8,15 @@ import BreadcrumbProduct from "../common/breadcrumb/BreadcrumbProduct ";
 
 const Details = () => {
   const { categorySlug, slug } = useParams();
-
-  console.log(categorySlug);
+  const repSlug = slug.replace(/-/g, " ");
+  
   return (
     <>
       <HeaderThree />
       <BreadcrumbProduct
-        heading={slug}
+        heading={repSlug}
         currentPage={categorySlug}
-        product={slug}
+        product={repSlug}
       />
       <IlUrün />
       <FooterOne />

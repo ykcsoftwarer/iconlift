@@ -7040,7 +7040,7 @@ a.sc-hLBbgP {
 .services-details-category-list li a span::before {
   position: relative;
   display: inline-block;
-  /* float: right; */
+  float: right;
   color: var(--thm-black);
   font-size: 25px;
   line-height: 28px;
