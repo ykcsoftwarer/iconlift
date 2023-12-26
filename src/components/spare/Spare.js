@@ -33,7 +33,7 @@ const Spare = () => {
           <div className="row">
             {/* Start Services One Single */}
             {pageData?.map((e, index) => {
-              console.log("deeeee", e);
+              
 
               const cards = e?.map((item, itemIndex) => (
                 <div key={itemIndex} className="col-xl-4 col-lg-4">

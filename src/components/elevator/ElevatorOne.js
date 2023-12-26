@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useIconContext } from "../../context/Context";
 
-
 const ElevatorOne = () => {
   const { slug } = useParams();
   const { fetchPageData, page, lang, asansorPath } = useIconContext();
@@ -18,10 +17,6 @@ const ElevatorOne = () => {
     (page) => page?.modulName === "categoriesmenu"
   );
   const pageData = modulPage.map((page) => page?.data);
-
-  console.log("product", pageData);
-
-  let publicUrl = process.env.PUBLIC_URL + "/";
   return (
     <>
       <section className="services-one-sec">
@@ -37,7 +32,7 @@ const ElevatorOne = () => {
           <div className="row">
             {/* Start Services One Single */}
             {pageData?.map((e, index) => {
-              console.log("deeeee", e);
+              
 
               const cards = e?.map((item, itemIndex) => (
                 <div key={itemIndex} className="col-xl-4 col-lg-4">

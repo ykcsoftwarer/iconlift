@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import LogoBlack from "./LogoBlack";
 
 import MobileMenu from "./MobileMenu";
@@ -15,7 +15,7 @@ const HeaderOne = () => {
   const siteData = about?.data;
   const logo= siteData?.logo01
   const socialMedia= siteData?.socialMedia
-  console.log("trans", siteData?.whatsapp);
+  
   return (
     <>
       <header className="main-header main-header-three clearfix">

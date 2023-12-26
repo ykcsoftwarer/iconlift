@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom';
 export default class BreadcrumbElevator extends React.Component {
     render(){
         let heading = this.props.heading;
-        const product =this.props.product
+        // const product =this.props.product
         let publicUrl = process.env.PUBLIC_URL+'/'
-        let currentPage = this.props.currentPage ? this.props.currentPage : heading
+        // let currentPage = this.props.currentPage ? this.props.currentPage : heading
         let Img = this.props.Img ? this.props.Img :'page-header-img.jpg'
         return (
             <>

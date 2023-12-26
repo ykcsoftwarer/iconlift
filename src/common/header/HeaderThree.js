@@ -13,7 +13,7 @@ const HeaderThree = () => {
   const data = translations?.data;
   const siteData = about?.data;
   const logo = siteData?.logo02;
-  // console.log("trans", about);
+  
   return (
     <>
       <header className="main-header main-header-one clearfix">
